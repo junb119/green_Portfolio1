@@ -1,0 +1,181 @@
+@import url(./reset.css);
+
+:root {
+  /* font : style weight size/height familly  */
+  --T-family: "Roboto";
+  --T-size: 16px;
+  --T-weight-bold: bold;
+  --T-weight-Regular: normal;
+  --T-height-auto: auto;
+
+  --T-header-size: 16px;
+
+  --T-mainTitle-size: 24px;
+  --T-mainTitle-height: 39px;
+
+  --T-subTitle-size: 18px;
+  --T-subTitle-height: 29px;
+
+  --T-footerNav-size: 16px;
+
+  --T-footerContent-size: 14px;
+  --T-footerContent-height: 22px;
+
+  --T-menuIcon-size: 20px;
+  --T-menuText-size: 14px;
+
+  --T-sectionTitle-size: 32px;
+  --T-magazine-size: 16px;
+
+  --C-strong: #ff0606;
+  --C-footerNav: #333;
+  --C-footerDesc: #757575;
+  --C-white: #fff;
+  --C-appTitle: #c6431d;
+  --C-appBody: #1b1b1b;
+}
+
+/* layout */
+body {
+  box-sizing: border-box;
+  font-family: var(--T-family);
+  font-size: var(--T-body);
+}
+header,
+main,
+footer {
+  width: 100vw;
+}
+
+section {
+  /* width: 100%; */
+}
+.container {
+  width: 90%;
+}
+.half {
+  width: 50%;
+  height: 100vh;
+}
+
+header .container {
+  /* width: 1720px; */
+
+  height: 100%;
+}
+.d-flex {
+  display: flex;
+}
+.f-d-c {
+  flex-direction: column;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.jc-c {
+  justify-content: center;
+}
+.ai-c {
+  align-items: center;
+}
+
+/* typography */
+.strong {
+  color: var(--C-strong);
+}
+/* ---------------------------------------------------header */
+
+header {
+  background-color: rgba(217, 217, 217, 0.2);
+  box-sizing: border-box;
+  position: fixed;
+  color: var(--C-white);
+  z-index: 99;
+  padding: 10px 0;
+}
+
+header .container .gnb {
+  gap: 30px;
+  /* text-transform: uppercase; */
+}
+
+.gnb li a {
+  font-size: var(--T-header-size);
+  font-weight: var(--T-weight-bold);
+  line-height: calc(var(--T-size) * 2);
+  text-transform: uppercase;
+}
+
+#logo a {
+  display: block;
+  background: url("../images/logo_2021.svg") no-repeat;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999em;
+}
+header .container .user_menu {
+  gap: 40px;
+}
+.user_menu a {
+  gap: 5px;
+}
+.user_menu .menuicon {
+  font-size: var(--T-menuIcon-size);
+}
+.user_menu div {
+  font-size: var(--T-menuText-size);
+}
+
+/* ---------------------------------------------------footer */
+footer {
+  margin-bottom: 48px;
+}
+footer nav .footerTitle {
+  font-size: var(--T-footerNav-size);
+  color: var(--C-footerNav);
+  font-weight: var(--T-weight-bold);
+  gap: 20px;
+}
+footer nav > div,
+footer nav > p {
+  font-size: var(--T-footerContent-size);
+  line-height: var(--T-footerContent-height);
+  color: var(--C-footerDesc);
+  margin: 27px 0;
+}
+
+footer nav .f-r-p {
+  margin-left: 40px;
+  gap: 15px;
+}
+footer nav .f-r-p h3 {
+  font-weight: var(--T-weight-bold);
+}
+
+footer nav .f-r-p h3 a {
+  color: var(--C-footerNav);
+  font-weight: normal;
+  /* background-color: var(); */
+  padding: 0 10px;
+  margin-left: 10px;
+  border: 1px solid;
+}
+footer nav .f-r-p h3 a:hover {
+  color: var(--C-white);
+  background-color: var(--C-footerDesc);
+  text-decoration: underline;
+}
+
+footer nav .f-r-p h3 a:after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 1px;
+  background: url("../images/bullet_f_detail.png") no-repeat left top;
+}
+
+footer .sns {
+  gap: 25px;
+  font-size: 36px;
+}
