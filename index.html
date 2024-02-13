@@ -14,17 +14,86 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- 웹폰트 가져오기  -->
     <link rel="stylesheet" href="./css/main.css" />
     <title>유니클로 | 여성, 남성, 키즈&베이비 의류</title>
   </head>
   <body>
     <header class="d-flex jc-c">
-      <section class="container d-flex jc-sb ai-c">
+      <di class="container d-flex jc-sb ai-c">
         <ul class="gnb d-flex jc-sb ai-c">
-          <li><a href="">woman</a></li>
-          <li><a href="">men</a></li>
-          <li><a href="">child</a></li>
-          <li><a href="">event</a></li>
+          <!-- header 목록 만들기 -->
+          <li class="gnbTitle">
+            <a href="">woman</a>
+            <ul class="gnbMenu hidden">
+              <li><a href="#">outer 아우터</a></li>
+              <li><a href="#">tops 상의</a></li>
+              <li><a href="#">pants 팬츠</a></li>
+              <li><a href="#">dressㆍskirt 원피스ㆍ스커트</a></li>
+              <li><a href="#">sport utility wear 스포츠유틸리티웨어</a></li>
+              <li><a href="#">heattech 히트텍</a></li>
+              <li><a href="#">airism 에어리즘</a></li>
+              <li><a href="#">innerwear 이너웨어</a></li>
+              <li><a href="#">homewear 홈웨어</a></li>
+              <li><a href="#">accessories 액세서리</a></li>
+            </ul>
+          </li>
+          <li class="gnbTitle">
+            <a href="">men</a>
+            <ul class="gnbMenu hidden">
+              <li><a href="#">outer 아우터</a></li>
+              <li><a href="#">tops 상의</a></li>
+              <li><a href="#">pants 팬츠</a></li>
+              <li><a href="#">sport utility wear 스포츠유틸리티웨어</a></li>
+              <li><a href="#">heattech 히트텍</a></li>
+              <li><a href="#">airism 에어리즘</a></li>
+              <li><a href="#">innerwear 이너웨어</a></li>
+              <li><a href="#">homewear 홈웨어</a></li>
+              <li><a href="#">accessories 액세서리</a></li>
+            </ul>
+          </li>
+          <li class="gnbTitle">
+            <a href="">child</a>
+            <div class="hidden">
+              <h3>kids</h3>
+              <hr>
+              <ul class="gnbMenu ">
+                <li><a href="#">outer 아우터</a></li>
+                <li><a href="#">tops 상의</a></li>
+                <li><a href="#">pants 팬츠</a></li>
+                <li><a href="#">heattech 히트텍</a></li>
+                <li><a href="#">airism 에어리즘</a></li>
+                <li><a href="#">innerwear 이너웨어</a></li>
+                <li><a href="#">junior bra 주니어 브라</a></li>
+                <li><a href="#">accessories 액세서리</a></li>
+              </ul>
+            </div>
+            <div class="hidden">
+              <h3>baby top</h3>
+              <ul>
+                <li><a href="">new born 신생아(0개월~2세)</a></li>
+                <li><a href="">toddler 영유아(6개월~5세)</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnbTitle"><a href="">event</a>
+          <ul class="hidden">
+            <li><a href="">신상품</a></li>
+            <li><a href="">판매예정상품</a></li>
+            <li><a href="">기간한정, 세트할인상품</a></li>
+            <li><a href="">가격인하상품</a></li>
+            <li><a href="">특별사이즈상품(xs,xxl,3xl)</a></li>
+            <li><a href="">weekly ranking</a></li>
+            <li><a href="">대량구매</a></li>
+            <li><a href="">lifewear magazine</a></li>
+            <li><a href="">ut! wear your world</a></li>
+            <li><a href="">uniqlo master piece</a></li>
+            <li><a href="">uniqlo update</a></li>
+            <li><a href="">live station</a></li>
+            <li><a href="">이번주 추천 특집</a></li>
+            <li><a href="">콜라보레이션</a></li>
+          </ul>
+        </li>
         </ul>
         <h1 id="logo"><a href="#">uniqlo_logo</a></h1>
         <ul class="user_menu d-flex jc-sb">
@@ -61,10 +130,15 @@
       <section class="videoContainer">
         <a href="#">
           <video muted autoplay loop>
-            <source
+            <!-- <source
               src="./images/video/SnapSave.io-NEW SEASON NEW STYLE, 겨울의 문턱에서.-(1080p).mp4"
               type="video/mp4"
-            />
+            /> -->
+            <!-- <iframe frameborder="0" height="560" width="315" src="https://www.youtube.com/embed/4fru9ncw5NE?mute=1&loop=1&autoplay=1&rel=0&controls=0&showinfo=0" allow="autoplay; encrypted-media" allowfullscreen> -->
+
+            <!-- 선생님의 피드백을 받고 유튜브 iframe으로 영상배경을 넣는 시도를 해보고있는데 잘 안되고 있습니다.
+              혹시 방법을 아신다면 피드백 부탁드립니다. 만약 방법이 없다면 cloudinary로 해보겠습니다.
+            -->
           </video>
         </a>
       </section>
@@ -169,6 +243,7 @@
             <a href="#"><img src="./images/slide/slide11.jpg" />slide11</a>
           </li>
         </ul>
+        <div class="pager"></div>
       </section>
       <section class="secondary_items d-flex">
         <div class="l-items half">
@@ -257,9 +332,13 @@
       </section>
     </main>
     <hr />
-    <footer class="d-flex f-d-c ai-c jc-c">
+    <footer class="d-flex f-d-c ai-c">
+      <!-- 선생님 피드백을 수용해서 nav밖으로 div와 copyright를 밖으로 빼내었는데
+           디자인에서 의도한대로 요소들이 가운데에 있되 왼쪽정렬된 상태로 둘 방법을 못 찾겠습니다.
+           방법이 있을까요?
+      -->
       <nav class="f_txt">
-        <ul class="footerTitle d-flex ">
+        <ul class="footerTitle d-flex">
           <li><a href="#">주문/배송조회</a></li>
           <li><a href="#">매장안내</a></li>
           <li><a href="#">고객센터</a></li>
@@ -271,50 +350,50 @@
           <li><a href="#" class="strong">개인정보처리방침</a></li>
           <li><a href="#">예치금 조회/환급</a></li>
         </ul>
-        <div class="d-flex ">
-          <ul class="f-l-p">
-            <li>에프알엘코리아(주) 대표 : 정현석, 하타세 사토시</li>
-            <li>주소 : 서울시 송파구 올림픽로 300(롯데월드타워 24층)</li>
-            <li>통신판매업신고번호 : 2019-서울송파-2369</li>
-            <li>
-              사업자등록번호 : 104-81-91189<a href="#" target="_blank"
-                >사업자 정보 확인</a
-              >
-            </li>
-            <li>호스팅서비스사업자 : 롯데쇼핑(주) e커머스사업부</li>
-          </ul>
-          <ul class="f-r-p d-flex f-d-c">
-            <li>
-              <h3>
-                KEB 하나은행 구매안전서비스 (채무지급보증)<a href=""
-                  >자세히 보기</a
-                >
-              </h3>
-              <p>
-                당사는 고객님이 현금 결제한 금액에 대해 KEB 하나은행과
-                채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
-              </p>
-            </li>
-            <li>
-              <h3>
-                콘텐츠산업진흥법에 의한 콘텐츠보호안내
-                <a href="">자세히 보기</a>
-              </h3>
-            </li>
-            <li>
-              <h3>고객만족센터</h3>
-              <p>
-                TEL : 080-722-3300 FAX : 02-3213-7960 E-mail:
-                <a href="mailto:uniqlocs@uniqlo.co.kr">uniqlocs@uniqlo.co.kr</a>
-              </p>
-            </li>
-          </ul>
-        </div>
-        <p class="copyright">
-          유니클로 공식 온라인스토어는 롯데 LECS(www.lecs.com)를 이용하고
-          있습니다. | COPYRIGHT(C) UNIQLO CO., LTD. ALL RIGHTS RESERVED
-        </p>
       </nav>
+      <div class="d-flex">
+        <ul class="f-l-p">
+          <li>에프알엘코리아(주) 대표 : 정현석, 하타세 사토시</li>
+          <li>주소 : 서울시 송파구 올림픽로 300(롯데월드타워 24층)</li>
+          <li>통신판매업신고번호 : 2019-서울송파-2369</li>
+          <li>
+            사업자등록번호 : 104-81-91189<a href="#" target="_blank"
+              >사업자 정보 확인</a
+            >
+          </li>
+          <li>호스팅서비스사업자 : 롯데쇼핑(주) e커머스사업부</li>
+        </ul>
+        <ul class="f-r-p d-flex f-d-c">
+          <li>
+            <h3>
+              KEB 하나은행 구매안전서비스 (채무지급보증)<a href=""
+                >자세히 보기</a
+              >
+            </h3>
+            <p>
+              당사는 고객님이 현금 결제한 금액에 대해 KEB 하나은행과
+              채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+            </p>
+          </li>
+          <li>
+            <h3>
+              콘텐츠산업진흥법에 의한 콘텐츠보호안내
+              <a href="">자세히 보기</a>
+            </h3>
+          </li>
+          <li>
+            <h3>고객만족센터</h3>
+            <p>
+              TEL : 080-722-3300 FAX : 02-3213-7960 E-mail:
+              <a href="mailto:uniqlocs@uniqlo.co.kr">uniqlocs@uniqlo.co.kr</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <p class="copyright">
+        유니클로 공식 온라인스토어는 롯데 LECS(www.lecs.com)를 이용하고
+        있습니다. | COPYRIGHT(C) UNIQLO CO., LTD. ALL RIGHTS RESERVED
+      </p>
       <ul class="sns d-flex">
         <li>
           <a href=""><i class="fa-brands fa-square-facebook"></i></a>
@@ -324,7 +403,7 @@
         </li>
         <li>
           <a href=""><i class="fa-brands fa-square-youtube"></i></a>
-        </li>test1
+        </li>
       </ul>
     </footer>
   </body>
