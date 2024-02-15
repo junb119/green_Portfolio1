@@ -88,7 +88,7 @@ main .videoContainer video {
 .slideContainer li img {
   width: 30%;
 
-  .slideContai/* object-fit: cover; */;
+  /* object-fit: cover; */
 }
 
 /* ----------------------------secondary_items section */

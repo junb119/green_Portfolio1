@@ -82,7 +82,7 @@ header .container {
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
 }
 
 /* typography */
