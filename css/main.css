@@ -191,22 +191,24 @@ main .videoContainer video {
 .app .textContainer {
   color: var(--C-appTitle);
   /* width: 30%; */
-  transform: translateX(-100%);
+  /* transform: translateX(-100%);
   opacity: 0;
   visibility: hidden;
-  transition: 2s;
+  transition: 2s; */
 }
 .app .textContainer h2 {
   font-size: 73px;
   font-weight: var(--T-weight-bold);
   text-transform: capitalize;
   margin-bottom: 30px;
+  transition: 1s ease-in-out;
 }
 .app .textContainer h3 {
   width: 410px;
   font-size: 26px;
   font-weight: var(--T-weight-bold);
   line-height: 42px;
+  transition: 1.2s ease-in-out;
 }
 
 .app .t-Contents img {

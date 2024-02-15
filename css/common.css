@@ -82,7 +82,7 @@ header .container {
 }
 
 .hidden {
-  /* display: none; */
+  display: none;
 }
 
 /* typography */
@@ -97,24 +97,39 @@ header {
   position: fixed;
   color: var(--C-white);
   z-index: 99;
-  padding: 10px 0;
+  /* padding: 10px 0; */
 }
 header .container {
   align-items: start;
+  /* height: 100%; */
 }
 
 header .container .gnb {
-
   gap: 30px;
+  height: 100%;
   /* text-transform: uppercase; */
+}
+.gnb .gnbTitle {
+  height: 100%;
 }
 
 .gnb .gnbTitle > a {
+  /* display: block;
+  padding : 10px 0;
+  height: 40px; */
   font-size: var(--T-header-size);
   font-weight: var(--T-weight-bold);
   line-height: calc(var(--T-size) * 2);
   text-transform: uppercase;
-  text-shadow: 4px 4px 5px rgba(0,0,0,.25);
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.gnb .gnbTitle > a:hover ~ .gnbMenu {
+  display: block;
+}
+
+.gnbMenu {
+  position: absolute;
 }
 
 #logo a {
@@ -129,8 +144,7 @@ header .container .user_menu {
 }
 .user_menu a {
   gap: 5px;
-  text-shadow: 4px 4px 5px rgba(0,0,0,.5);
-
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
 }
 .user_menu .menuicon {
   font-size: var(--T-menuIcon-size);
