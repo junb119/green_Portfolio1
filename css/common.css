@@ -99,8 +99,12 @@ header {
   z-index: 99;
   padding: 10px 0;
 }
+header .container {
+  align-items: start;
+}
 
 header .container .gnb {
+
   gap: 30px;
   /* text-transform: uppercase; */
 }

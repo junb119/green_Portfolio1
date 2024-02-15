@@ -33,7 +33,7 @@ main .videoContainer video {
 /* ------------main_items section */
 .titleImage img {
   width: 100%;
-  height: 100vh;
+  
   object-fit: contain;
 }
 .itemsWrapper {
@@ -91,12 +91,13 @@ main .videoContainer video {
   gap: 5%;
 }
 .slideContainer > li {
-  /* width: 30vw; */
+  width: 620px;
 }
 .slideContainer li a {
+  display: block;
 }
 .slideContainer > li img {
-  width: 30vw;
+  width: 100%;
   /* width: 620px; */
   
   
@@ -214,8 +215,10 @@ main .videoContainer video {
 }
 
 .app .t-Contents img {
-  width: 557px;
-  margin-left: 93px;
+  max-width: 557px;
+  /* width: 557px; */
+  width: 50%;
+  /* margin-left: 93px; */
 }
 
 .app .b-Contents {

@@ -4,10 +4,14 @@ const slides = slideContainer.querySelectorAll('li');
 const slidesCount = slides.length;
 const slideToShow = 3;
 // ------------------------------app
-const appTextContainer = document.querySelector('.textContainer')
+
+const appSection = document.querySelector('.app')
+const appTextContainer = appSection.querySelector('.textContainer')
 const appTitle = appTextContainer.querySelector('h2')
 const appDesc = appTextContainer.querySelector('h3')
 console.log('test',appTextContainer.offsetTop)
+
+
 
 window.addEventListener('scroll', ()=> {
   if (scrollY > appTextContainer.offsetTop-800) {
@@ -21,4 +25,3 @@ window.addEventListener('scroll', ()=> {
   }
 })
 
-console.log
