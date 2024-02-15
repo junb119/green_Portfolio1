@@ -57,7 +57,7 @@ section {
 }
 .half {
   width: 50%;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 header .container {
@@ -110,6 +110,7 @@ header .container .gnb {
   font-weight: var(--T-weight-bold);
   line-height: calc(var(--T-size) * 2);
   text-transform: uppercase;
+  text-shadow: 4px 4px 5px rgba(0,0,0,.25);
 }
 
 #logo a {
@@ -124,6 +125,8 @@ header .container .user_menu {
 }
 .user_menu a {
   gap: 5px;
+  text-shadow: 4px 4px 5px rgba(0,0,0,.5);
+
 }
 .user_menu .menuicon {
   font-size: var(--T-menuIcon-size);
