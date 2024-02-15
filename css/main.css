@@ -13,6 +13,15 @@ main .videoContainer {
 
   background-color: #000;
 } */
+main .videoContainer > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
 main .videoContainer video {
   width: 100%;
@@ -24,7 +33,7 @@ main .videoContainer video {
 /* ------------main_items section */
 .titleImage img {
   width: 100%;
-  height: 100vh;
+
   object-fit: contain;
 }
 .itemsWrapper {
@@ -78,17 +87,18 @@ main .videoContainer video {
   /* overflow: hidden; */
 }
 .slideContainer {
-  width: 100vw;
+  display: flex;
+  gap: 5%;
 }
-.slideContainer li {
-  width: 30%;
+.slideContainer > li {
+  width: 620px;
 }
 .slideContainer li a {
+  display: block;
 }
-.slideContainer li img {
-  width: 30%;
-
-  /* object-fit: cover; */
+.slideContainer > li img {
+  width: 100%;
+  /* width: 620px; */
 }
 
 /* ----------------------------secondary_items section */
@@ -96,7 +106,7 @@ main .videoContainer video {
   position: relative;
   width: 100%;
   height: auto;
-  /* 브라우저 너비가 줄면 height도 줄어야하는데 줄지않아서 아래 여백이 생김*/
+
   /* overflow: hidden; */
 }
 .secondary_items img {
@@ -112,8 +122,6 @@ main .videoContainer video {
   transform: translate(-50%, -50%);
   text-align: center;
   color: var(--C-white);
-  /* 브라우저너비를 줄이면 section 가운데 위치하지 않는 현상 발생 */
-  /* .secondary_items 높이가 줄지 않아서 발생하는 것으로 추측  */
 }
 .secondary_title h2 {
   font-size: 64px;
@@ -136,7 +144,6 @@ main .videoContainer video {
   margin: 0 5%;
   width: 40%;
   height: auto;
-  /* 브라우저 너비를 줄여도 li 높이는 변하지 않아서 위아래로 길어보이는 현상. flex의 늘어나는 특성 때문인가?  */
 }
 .magazine .m-list figure {
   display: flex;
@@ -184,6 +191,10 @@ main .videoContainer video {
 .app .textContainer {
   color: var(--C-appTitle);
   /* width: 30%; */
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 2s;
 }
 .app .textContainer h2 {
   font-size: 73px;
@@ -199,8 +210,10 @@ main .videoContainer video {
 }
 
 .app .t-Contents img {
-  width: 557px;
-  margin-left: 93px;
+  max-width: 557px;
+  /* width: 557px; */
+  width: 50%;
+  /* margin-left: 93px; */
 }
 
 .app .b-Contents {
