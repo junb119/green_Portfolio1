@@ -139,8 +139,16 @@ header .container .gnb {
   
 }
 
-.gnbMenu > li {
+.gnbMenu li a{
+  display: block;
+  left :0;
+  right:0;
   padding: 5px 0;
+}
+.gnbMenu li:hover{
+  background-color: #757575;
+
+
 }
 
 #logo a {
