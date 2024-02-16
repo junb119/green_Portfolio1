@@ -3,13 +3,35 @@ const slideContainer = slideWrapper.querySelector(".slideContainer");
 const slides = slideContainer.querySelectorAll("li");
 const slidesCount = slides.length;
 const slideToShow = 3;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ------------------------------app
 
-const appSection = document.querySelector(".app");
-const appTextContainer = appSection.querySelector(".textContainer");
+const appTextContainer = document.querySelector(".app .textContainer");
 const appTitle = appTextContainer.querySelector("h2");
 const appDesc = appTextContainer.querySelector("h3");
-console.log("test", appTextContainer.offsetTop);
 
 window.addEventListener("scroll", () => {
   showToRight(appTitle, scrollY);
@@ -17,7 +39,7 @@ window.addEventListener("scroll", () => {
 });
 
 function showToRight(target, scrollMount) {
-  if (scrollMount > target.offsetTop - 600) {
+  if (scrollMount > appTextContainer.offsetTop - 600) {
     target.style.transform = "translateX(0%)";
     target.style.opacity = 1;
     target.style.visibility = "visible";

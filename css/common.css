@@ -100,36 +100,45 @@ header {
   /* padding: 10px 0; */
 }
 header .container {
-  align-items: start;
+  /* align-items: start; */
+  /* align-items: center; */
   /* height: 100%; */
 }
 
 header .container .gnb {
-  gap: 30px;
-  height: 100%;
+  gap: 50px;
+  position: relative;
+  /* height: 100%; */
   /* text-transform: uppercase; */
 }
 .gnb .gnbTitle {
-  height: 100%;
+  height: calc(100% + (10px * 2));
+  margin: 0 -10px
 }
 
 .gnb .gnbTitle > a {
-  /* display: block;
-  padding : 10px 0;
-  height: 40px; */
+  display: block;
+  /* padding : 10px 0; */
+  /* height: 60px; */
   font-size: var(--T-header-size);
   font-weight: var(--T-weight-bold);
-  line-height: calc(var(--T-size) * 2);
+  line-height: 60px;
   text-transform: uppercase;
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
 }
 
-.gnb .gnbTitle > a:hover ~ .gnbMenu {
+.gnb .gnbTitle:hover .gnbMenu {
   display: block;
+  
 }
 
 .gnbMenu {
   position: absolute;
+  left:0
+}
+
+.gnbMenu > li {
+  
 }
 
 #logo a {
