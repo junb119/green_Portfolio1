@@ -83,7 +83,7 @@ main .videoContainer video {
 /* -----------------------slide section */
 
 .slideWrapper {
-  width: 100vw;
+  
   /* overflow: hidden; */
 }
 .slideContainer {
@@ -221,9 +221,10 @@ main .videoContainer video {
 .app .b-Contents {
   margin-top: 30px;
   gap: 50px;
-}
-.app .b-Contents {
   text-align: center;
+}
+.app .b-Contents img{
+  width: 100%;
 }
 
 .app .b-Contents h4 {
