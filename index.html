@@ -16,97 +16,401 @@
     />
     <!-- 웹폰트 가져오기  -->
     <link rel="stylesheet" href="./css/main.css" />
-    <script defer type="module" src="./js/main.js"></script>
+    <script defer src="./js/main.js"></script>
     <title>유니클로 | 여성, 남성, 키즈&베이비 의류</title>
   </head>
   <body>
-    <header class="d-flex jc-c ">
-      <section class="container d-flex jc-sb ">
-        <ul class="gnb d-flex jc-sb ">
+    <header class="d-flex jc-c">
+      <section class="container d-flex jc-sb">
+        <ul class="gnb d-flex jc-sb">
           <!-- header 목록 만들기 -->
           <li class="gnbTitle">
-            <a href="">woman</a>
+            <a href="#">woman</a>
             <ul class="gnbMenu hidden">
               <li><h3>women</h3></li>
-              <li><hr></li>
               <li class="titleItem d-flex">
                 <a href="#">outer 아우터</a>
-                <ul>
-                  <li>아우터 모두 보기</li>
-                  <li>경량 패딩</li>
-                  <li>캐쥬얼(블루종 , 파카)</li>
-                  <li>블레이저(셋업 추천)</li>
-                  <li>패딩(다운)</li>
-                  <li>후리스</li>
-                </ul>  
+                <ul class="hidden">
+                  <li><a>아우터 모두 보기</a></li>
+                  <li><a href="#">경량 패딩</a></li>
+                  <li><a href="#">캐쥬얼(블루종 , 파카)</a></li>
+                  <li><a href="#">블레이저(셋업 추천)</a></li>
+                  <li><a href="#">패딩(다운)</a></li>
+                  <li><a href="#">후리스</a></li>
+                </ul>
               </li>
-              <li><a href="#">tops 상의</a></li>
-              <li><a href="#">pants 팬츠</a></li>
-              <li><a href="#">dressㆍskirt 원피스ㆍ스커트</a></li>
-              <li><a href="#">sport utility wear 스포츠유틸리티웨어</a></li>
-              <li><a href="#">heattech 히트텍</a></li>
-              <li><a href="#">airism 에어리즘</a></li>
-              <li><a href="#">innerwear 이너웨어</a></li>
-              <li><a href="#">homewear 홈웨어</a></li>
-              <li><a href="#">accessories 액세서리</a></li>
+              <li class="titleItem d-flex">
+                <a href="#">tops 상의</a>
+                <ul class="hidden">
+                  <li><a href="#">상의 모두 보기</a></li>
+                  <li><a href="#">스웨트</a></li>
+                  <li><a href="#">니트, 가디건</a></li>
+                  <li><a href="#">셔츠, 블라우스</a></li>
+                  <li><a href="#">티셔츠</a></li>
+                  <li><a href="#">UT(그래픽티셔츠)</a></li>
+                  <li><a href="#">후리스</a></li>
+                  <li><a href="#">브라탑</a></li>
+                  <li><a href="#">PEACE FOR ALL</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">pants 팬츠</a>
+                <ul class="hidden">
+                  <li><a href="#">팬츠 모두 보기</a></li>
+                  <li><a href="#">진</a></li>
+                  <li><a href="#">캐주얼팬츠</a></li>
+                  <li><a href="#">슬렉스</a></li>
+                  <li><a href="#">와이드팬츠(진, 슬렉스, 카고)</a></li>
+                  <li><a href="#">스웨트팬츠</a></li>
+                  <li><a href="#">히트택팬츠</a></li>
+                  <li><a href="#">레깅스팬츠</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">dressㆍskirt 원피스ㆍ스커트</a>
+                <ul class="hidden">
+                  <li><a href="#">원피스, 스커트 모드 보기</a></li>
+                  <li><a href="#">원피스</a></li>
+                  <li><a href="#">스커트</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">sport utility wear 스포츠유틸리티웨어</a>
+                <ul class="hidden">
+                  <li><a href="#">스포츠 유틸리티 웨어 모두보기</a></li>
+                  <li><a href="#">아우터</a></li>
+                  <li><a href="#">티셔츠</a></li>
+                  <li><a href="#">팬츠, 레깅스</a></li>
+                  <li><a href="#">브라탑</a></li>
+                  <li><a href="#">양말</a></li>
+                  <li><a href="#">모자, 장갑, 가방</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">heattech 히트텍</a>
+                <ul class="hidden">
+                  <li><a href="#">HEATTECH 히트텍 모두 보기</a></li>
+                  <li><a href="#">이너웨어</a></li>
+                  <li><a href="#">레그웨어(양말, 타이즈)</a></li>
+                  <li><a href="#">티셔츠</a></li>
+                  <li><a href="#">팬츠</a></li>
+                  <li><a href="#">머플러, 스카프</a></li>
+                  <li><a href="#">장갑</a></li>
+                  <li><a href="#">모자</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">airism 에어리즘</a>
+                <ul class="hidden">
+                  <li><a href="#">AIRism 모두 보기</a></li>
+                  <li><a href="#">이너웨어</a></li>
+                  <li><a href="#">브라탑</a></li>
+                  <li><a href="#">아우터</a></li>
+                  <li><a href="#">티셔츠</a></li>
+                  <li><a href="#">레깅스</a></li>
+                  <li><a href="#">팬츠</a></li>
+                  <li><a href="#">원피스</a></li>
+                  <li><a href="#">홈웨어</a></li>
+                  <li><a href="#">암커버</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">innerwear 이너웨어</a>
+                <ul class="hidden">
+                  <li><a href="#">이너웨어 모두 보기</a></li>
+                  <li><a href="#">와이어리스 브라</a></li>
+                  <li><a href="#">쇼츠</a></li>
+                  <li><a href="#">히트텍</a></li>
+                  <li><a href="#">에어리즘</a></li>
+                  <li><a href="#">브라탑</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">homewear 홈웨어</a>
+                <ul class="hidden">
+                  <li><a href="#">홈웨어 모두 보기</a></li>
+                  <li><a href="#">파자마(잠옷)</a></li>
+                  <li><a href="#">이지팬츠</a></li>
+                  <li><a href="#">룸슈즈</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">accessories 액세서리</a>
+                <ul class="hidden">
+                  <li><a href="#">액세서리 모두 보기</a></li>
+                  <li><a href="#">선글라스(안경)</a></li>
+                  <li><a href="#">가방</a></li>
+                  <li><a href="#">모자, 비니</a></li>
+                  <li><a href="#">벨트</a></li>
+                  <li><a href="#">우산, 암커버</a></li>
+                  <li><a href="#">머플러, 장갑</a></li>
+                  <li><a href="#">히트텍 액세서리</a></li>
+                  <li><a href="#">양말, 타이즈</a></li>
+                </ul>
+              </li>
             </ul>
-            
           </li>
           <li class="gnbTitle">
-            <a href="">men</a>
+            <a href="#">men</a>
             <ul class="gnbMenu hidden">
               <li><h3>men</h3></li>
-              <li><hr></li>
-              <li><a href="#">outer 아우터</a></li>
-              <li><a href="#">tops 상의</a></li>
-              <li><a href="#">pants 팬츠</a></li>
-              <li><a href="#">sport utility wear 스포츠유틸리티웨어</a></li>
-              <li><a href="#">heattech 히트텍</a></li>
-              <li><a href="#">airism 에어리즘</a></li>
-              <li><a href="#">innerwear 이너웨어</a></li>
-              <li><a href="#">homewear 홈웨어</a></li>
-              <li><a href="#">accessories 액세서리</a></li>
+              <li class="titleItem d-flex">
+                <a href="#">outer 아우터</a>
+                <ul class="hidden">
+                  <li><a>아우터 모두 보기</a></li>
+                  <li><a href="#">경량 패딩</a></li>
+                  <li><a href="#">캐쥬얼(블루종, 데님, 유틸리티)</a></li>
+                  <li><a href="#">코트, 블레이저</a></li>
+                  <li><a href="#">감탄 재킷 셋업</a></li>
+                  <li><a href="#">패딩(다운)</a></li>
+                  <li><a href="#">후리스</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">tops 상의</a>
+                <ul class="hidden">
+                  <li><a href="#">상의 모두 보기</a></li>
+                  <li><a href="#">스웨트(맨투맨)</a></li>
+                  <li><a href="#">니트, 가디건</a></li>
+                  <li><a href="#">티셔츠</a></li>
+                  <li><a href="#">UT(그래픽티셔츠)</a></li>
+                  <li><a href="#">캐쥬얼셔츠</a></li>
+                  <li><a href="#">정장셔츠</a></li>
+                  <li><a href="#">후리스</a></li>
+                  <li><a href="#">폴로셔츠</a></li>
+                  <li><a href="#">PEACE FOR ALL</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">pants 팬츠</a>
+                <ul class="hidden">
+                  <li><a href="#">팬츠 모두 보기</a></li>
+                  <li><a href="#">진</a></li>
+                  <li><a href="#">캐주얼팬츠</a></li>
+                  <li><a href="#">치노팬츠</a></li>
+                  <li><a href="#">슬렉스</a></li>
+                  <li><a href="#">와이드팬츠(진, 슬렉스, 파라슈트)</a></li>
+                  <li><a href="#">히트택팬츠</a></li>
+                  <li><a href="#">감탄팬츠(기능성 팬츠)</a></li>
+                  <li><a href="#">스웨트 팬츠</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">sport utility wear 스포츠유틸리티웨어</a>
+                <ul class="hidden">
+                  <li><a href="#">스포츠 유틸리티 웨어 모두보기</a></li>
+                  <li><a href="#">아우터</a></li>
+                  <li><a href="#">티셔츠</a></li>
+                  <li><a href="#">스웨트</a></li>
+                  <li><a href="#">팬츠</a></li>
+                  <li><a href="#">이너웨어</a></li>
+                  <li><a href="#">양말</a></li>
+                  <li><a href="#">모자, 가방</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">heattech 히트텍</a>
+                <ul class="hidden">
+                  <li><a href="#">HEATTECH 히트텍 모두 보기</a></li>
+                  <li><a href="#">이너웨어</a></li>
+                  <li><a href="#">레그웨어(양말, 타이즈)</a></li>
+                  <li><a href="#">아우터</a></li>
+                  <li><a href="#">티셔츠</a></li>
+                  <li><a href="#">팬츠</a></li>
+                  <li><a href="#">머플러, 스카프</a></li>
+                  <li><a href="#">장갑</a></li>
+                  <li><a href="#">모자</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">airism 에어리즘</a>
+                <ul class="hidden">
+                  <li><a href="#">AIRism 모두 보기</a></li>
+                  <li><a href="#">이너웨어</a></li>
+                  <li><a href="#">티셔츠</a></li>
+                  <li><a href="#">폴로셔츠</a></li>
+                  <li><a href="#">암커버</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">innerwear 이너웨어</a>
+                <ul class="hidden">
+                  <li><a href="#">이너웨어 모두 보기</a></li>
+                  <li><a href="#">브리프, 트렁크스</a></li>
+                  <li><a href="#">히트텍</a></li>
+                  <li><a href="#">에어리즘</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">homewear 홈웨어</a>
+                <ul class="hidden">
+                  <li><a href="#">홈웨어 모두 보기</a></li>
+                  <li><a href="#">이지팬츠</a></li>
+                  <li><a href="#">룸슈즈</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">accessories 액세서리</a>
+                <ul class="hidden">
+                  <li><a href="#">액세서리 모두 보기</a></li>
+                  <li><a href="#">선글라스(안경)</a></li>
+                  <li><a href="#">가방</a></li>
+                  <li><a href="#">모자, 비니</a></li>
+                  <li><a href="#">벨트</a></li>
+                  <li><a href="#">우산, 암커버</a></li>
+                  <li><a href="#">머플러, 장갑</a></li>
+                  <li><a href="#">히트텍 액세서리</a></li>
+                  <li><a href="#">양말</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li class="gnbTitle">
-            <a href="">child</a>
+            <a href="#">child</a>
             <div class="gnbMenu hidden">
               <h3>kids</h3>
-              <hr>
               <ul>
-                <li><a href="#">outer 아우터</a></li>
-                <li><a href="#">tops 상의</a></li>
-                <li><a href="#">pants 팬츠</a></li>
-                <li><a href="#">heattech 히트텍</a></li>
-                <li><a href="#">airism 에어리즘</a></li>
-                <li><a href="#">innerwear 이너웨어</a></li>
-                <li><a href="#">junior bra 주니어 브라</a></li>
-                <li><a href="#">accessories 액세서리</a></li>
+                <li class="titleItem d-flex">
+                  <a href="#">outer 아우터</a>
+                  <ul class="hidden">
+                    <li><a href="#">아우터 모두 보기</a></li>
+                    <li><a href="#">블루종, 파카</a></li>
+                    <li><a href="#">패딩</a></li>
+                    <li><a href="#">후리스</a></li>
+                  </ul>
+                </li>
+                <li class="titleItem d-flex">
+                  <a href="#">tops 상의</a>
+                  <ul class="hidden">
+                    <li><a href="#">상의 모두 보기</a></li>
+                    <li><a href="#">스웨트</a></li>
+                    <li><a href="#">티셔츠</a></li>
+                    <li><a href="#">후리스</a></li>
+                    <li><a href="#">UT(그래픽티셔츠)</a></li>
+                  </ul>
+                </li>
+                <li class="titleItem d-flex">
+                  <a href="#">pants 팬츠</a>
+                  <ul class="hidden">
+                    <li><a href="#">팬츠 모두 보기</a></li>
+                    <li><a href="#">캐주얼 팬츠</a></li>
+                    <li><a href="#">진</a></li>
+                    <li><a href="#">스커트, 스커트 팬츠</a></li>
+                  </ul>
+                </li>
+                <li class="titleItem d-flex">
+                  <a href="#">heattech 히트텍</a>
+                  <ul class="hidden">
+                    <li><a href="#">heattech 모두 보기</a></li>
+                  </ul>
+                </li>
+                <li class="titleItem d-flex">
+                  <a href="#">airism 에어리즘</a>
+                  <ul class="hidden">
+                    <li><a href="#">airism 모두 보기</a></li>
+                  </ul>
+                </li>
+                <li class="titleItem d-flex">
+                  <a href="#">innerwear 이너웨어</a>
+                  <ul class="hidden">
+                    <li><a href="#">이너웨어 모두 보기</a></li>
+                    <li><a href="#">브리프, 쇼츠</a></li>
+                    <li><a href="#">히트텍</a></li>
+                  </ul>
+                </li>
+                <li class="titleItem d-flex">
+                  <a href="#">junior bra 주니어 브라</a>
+                  <ul class="hidden">
+                    <li><a href="#">브라, 브라탑</a></li>
+                  </ul>
+                </li>
+                <li class="titleItem d-flex">
+                  <a href="#">accessories 액세서리</a>
+                  <ul class="hidden">
+                    <li><a href="#">양말</a></li>
+                  </ul>
+                </li>
               </ul>
-              <h3 >baby top</h3>
-              <hr>
+              <h3>baby top</h3>
               <ul>
-                <li><a href="">new born 신생아(0개월~2세)</a></li>
-                <li><a href="">toddler 영유아(6개월~5세)</a></li>
+                <li class="titleItem d-flex">
+                  <a href="#">new born 신생아(0개월~2세)</a>
+                  <ul class="hidden">
+                    <li><a href="#">신생아 모두 보기</a></li>
+                    <li><a href="#">바디 수트</a></li>
+                    <li><a href="#">커버올</a></li>
+                    <li><a href="#">레깅스</a></li>
+                    <li><a href="#">파자마</a></li>
+                    <li><a href="#">액세서리</a></li>
+                  </ul>
+                </li>
+                <li class="titleItem d-flex">
+                  <a href="#">toddler 영유아(6개월~5세)</a>
+                  <ul class="hidden">
+                    <li><a href="#">영유아 모두 보기</a></li>
+                    <li><a href="#">스웨터 티셔츠</a></li>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">레깅스</a></li>
+                    <li><a href="#">이너웨어</a></li>
+                    <li><a href="#">파자마</a></li>
+                    <li><a href="#">액세서리</a></li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </li>
-          <li class="gnbTitle"><a href="">event</a>
+          <li class="gnbTitle">
+            <a href="#">event</a>
             <ul class="gnbMenu hidden">
-              <li><a href="">신상품</a></li>
-              <li><a href="">판매예정상품</a></li>
-              <li><a href="">기간한정, 세트할인상품</a></li>
-              <li><a href="">가격인하상품</a></li>
-              <li><a href="">특별사이즈상품(xs,xxl,3xl)</a></li>
-              <li><a href="">weekly ranking</a></li>
-              <li><a href="">대량구매</a></li>
-              <li><a href="">lifewear magazine</a></li>
-              <li><a href="">ut! wear your world</a></li>
-              <li><a href="">uniqlo master piece</a></li>
-              <li><a href="">uniqlo update</a></li>
-              <li><a href="">live station</a></li>
-              <li><a href="">이번주 추천 특집</a></li>
-              <li><a href="">콜라보레이션</a></li>
+              <li><a href="#">신상품</a></li>
+              <li><a href="#">판매예정상품</a></li>
+              <li><a href="#">기간한정, 세트할인상품</a></li>
+              <li><a href="#">가격인하상품</a></li>
+              <li><a href="#">특별사이즈상품(xs,xxl,3xl)</a></li>
+              <li><a href="#">weekly ranking</a></li>
+              <li><a href="#">대량구매</a></li>
+              <li><a href="#">lifewear magazine</a></li>
+              <li><a href="#">ut! wear your world</a></li>
+              <li><a href="#">uniqlo master piece</a></li>
+              <li><a href="#">uniqlo update</a></li>
+              <li><a href="#">live station</a></li>
+              <li class="titleItem d-flex">
+                <a href="#">이번주 추천 특집</a>
+                <ul class="hidden">
+                  <li><a href="#">모두보기</a></li>
+                  <li>
+                    <a href="#">히트텍으로 새로운 겨울의 즐거움을 열다</a>
+                  </li>
+                  <li><a href="#">[NEW] 더 새로워진 와이어리스 브라</a></li>
+                  <li>
+                    <a href="#"
+                      >[NEW] 컬러로 미리 즐기는 NEW SEASON, NEW STYLE</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#">[NEW] 올라운드 컬러, 인디고 블루 사용법</a>
+                  </li>
+                  <li><a href="#">콜라보레이션 아우터 라인업</a></li>
+                  <li><a href="#">다운 컬렉션</a></li>
+                  <li><a href="#">후리스 컬렉션</a></li>
+                  <li>
+                    <a href="#">히트텍으로 새로운 겨울의 즐거움을 열다</a>
+                  </li>
+                  <li><a href="#">히트텍 팬츠 컬렉션</a></li>
+                </ul>
+              </li>
+              <li class="titleItem d-flex">
+                <a href="#">콜라보레이션</a>
+                <ul class="hidden">
+                  <li>
+                    <a href="#"
+                      >New year 2024 UNIQLO x Marimekko 1월1일 판매개시</a
+                    >
+                  </li>
+                  <li><a href="#">Uniqlo U</a></li>
+                  <li><a href="#">UNIQLO and Engineered Garments</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
@@ -166,7 +470,7 @@
           <h3>가볍게 입기 좋은 캐주얼 아우터</h3>
           <ul class="items d-flex">
             <li>
-              <a href="">
+              <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_02.png"
                   alt=""
@@ -175,7 +479,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_03.png"
                   alt=""
@@ -184,7 +488,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_04.png"
                   alt=""
@@ -193,7 +497,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_05.png"
                   alt=""
@@ -202,7 +506,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_06.png"
                   alt=""
@@ -211,7 +515,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_07.png"
                   alt=""
@@ -363,20 +667,28 @@
         </ul>
         <div class="d-flex">
           <ul class="f-l-p">
-            <li><span>에프알엘코리아(주) 대표 :</span> 정현석, 하타세 사토시</li>
-            <li><span>주소 :</span> 서울시 송파구 올림픽로 300(롯데월드타워 24층)</li>
+            <li>
+              <span>에프알엘코리아(주) 대표 :</span> 정현석, 하타세 사토시
+            </li>
+            <li>
+              <span>주소 :</span> 서울시 송파구 올림픽로 300(롯데월드타워 24층)
+            </li>
             <li><span>통신판매업신고번호 :</span> 2019-서울송파-2369</li>
             <li>
-              <span>사업자등록번호 :</span> 104-81-91189<a href="#" target="_blank"
+              <span>사업자등록번호 :</span> 104-81-91189<a
+                href="#"
+                target="_blank"
                 >사업자 정보 확인</a
               >
             </li>
-            <li><span>호스팅서비스사업자 :</span> 롯데쇼핑(주) e커머스사업부</li>
+            <li>
+              <span>호스팅서비스사업자 :</span> 롯데쇼핑(주) e커머스사업부
+            </li>
           </ul>
           <ul class="f-r-p d-flex f-d-c">
             <li>
               <h3>
-                KEB 하나은행 구매안전서비스 (채무지급보증)<a href=""
+                KEB 하나은행 구매안전서비스 (채무지급보증)<a href="#"
                   >자세히 보기</a
                 >
               </h3>
@@ -388,7 +700,7 @@
             <li>
               <h3>
                 콘텐츠산업진흥법에 의한 콘텐츠보호안내
-                <a href="">자세히 보기</a>
+                <a href="#">자세히 보기</a>
               </h3>
             </li>
             <li>
@@ -405,17 +717,16 @@
           있습니다. | COPYRIGHT(C) UNIQLO CO., LTD. ALL RIGHTS RESERVED
         </p>
       </div>
-      
-      
+
       <ul class="sns d-flex">
         <li>
-          <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
         </li>
         <li>
-          <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
         </li>
         <li>
-          <a href=""><i class="fa-brands fa-square-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
         </li>
       </ul>
     </footer>

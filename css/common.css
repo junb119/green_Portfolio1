@@ -91,7 +91,11 @@ header .container {
 /* ---------------------------------------------------header */
 
 header {
-  background: linear-gradient(rgba(217, 217, 217, 0.2) 0 , rgba(217, 217, 217, 0.2) 70px, #000 70px);
+  background: linear-gradient(
+    rgba(217, 217, 217, 0.2) 0,
+    rgba(217, 217, 217, 0.2) 70px,
+    #000 70px
+  );
   /* background-color: rgba(217, 217, 217, 0.2); */
   box-sizing: border-box;
   position: fixed;
@@ -127,49 +131,74 @@ header .container .gnb {
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
 }
 
-.gnb .gnbTitle:hover .gnbMenu {
+/* .gnb .gnbTitle:hover .gnbMenu {
   display: block;
-   
-}
+} */
 
 .gnbMenu {
   position: absolute;
-  left:0;
+  left: 0;
   line-height: 25px;
-  border-right: 1px solid #fff;
-
-  
+}
+.gnbMenu:after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: calc(100% + 30px);
+  width: 1px;
+  height: 80%;
+  background-color: #fff;
 }
 
-.gnbMenu > li > a{
+.gnbMenu li a {
   display: block;
-  left :0;
-  right:0;
+  left: 0;
+  right: 0;
   padding: 5px 0;
 }
-.gnbMenu .titleItem ul{
+.titleItem ul {
   position: absolute;
-  left: 100px
+  top: 10%;
+  left: calc(100% + 50px);
+  white-space: nowrap;
+}
+.titleItem:hover ul {
+  display: block;
+}
+.gnbMenu h3 {
+  padding-top: 16px;
+  position: relative;
+  font-weight: bold;
+}
+.gnbMenu h3:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 50%;
+  height: 1px;
+  background: #fff;
 }
 
-
-.gnbMenu li+li:hover{
+.gnbMenu li + li:hover {
   background-color: #757575;
-
-
 }
+#logo {
+  padding-top: 15px;
+}
+
 #logo a {
   display: block;
   background: url("../images/logo_2021.svg") no-repeat;
   width: 40px;
   height: 40px;
   text-indent: -9999em;
-  ;
 }
 header .container .user_menu {
   gap: 40px;
 }
 .user_menu a {
+  padding-top: 15px;
   gap: 5px;
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
 }
@@ -198,7 +227,7 @@ footer .f_txt > p {
   margin-top: 27px;
 }
 
-footer .f-l-p span{
+footer .f-l-p span {
   font-weight: var(--T-weight-bold);
 }
 
