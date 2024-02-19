@@ -5,6 +5,10 @@
 /* main */
 
 /* -------------------video section */
+
+main section{
+  margin-bottom: 100px;
+}
 main .videoContainer {
   z-index: -1;
 }
@@ -83,22 +87,22 @@ main .videoContainer video {
 /* -----------------------slide section */
 
 .slideWrapper {
-  
+  width: 100%;
   /* overflow: hidden; */
 }
 .slideContainer {
   display: flex;
-  gap: 5%;
 }
 .slideContainer > li {
-  width: 620px;
+  flex-shrink: 0;
+  
 }
 .slideContainer li a {
-  display: block;
+  /* display: block; */
 }
 .slideContainer > li img {
   width: 100%;
-  /* width: 620px; */
+  
 }
 
 /* ----------------------------secondary_items section */
@@ -185,7 +189,7 @@ main .videoContainer video {
 
 /* --------------------app section */
 .app {
-  margin: 0 auto;
+  margin: 0 auto 100px;
 }
 
 .app .textContainer {

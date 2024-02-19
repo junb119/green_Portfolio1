@@ -19,7 +19,7 @@
   --T-footerNav-size: 16px;
 
   --T-footerContent-size: 14px;
-  --T-footerContent-height: 22px;
+  --T-footerContent-height: 23px;
 
   --T-menuIcon-size: 20px;
   --T-menuText-size: 14px;
@@ -114,7 +114,6 @@ header .container .gnb {
 .gnb .gnbTitle {
   /* height: calc(100% + (10px * 2)); */
   text-transform: uppercase;
-
 }
 
 .gnb .gnbTitle > a {
@@ -137,21 +136,28 @@ header .container .gnb {
   position: absolute;
   left:0;
   line-height: 25px;
+  border-right: 1px solid #fff;
+
   
 }
 
-.gnbMenu li a{
+.gnbMenu > li > a{
   display: block;
   left :0;
   right:0;
   padding: 5px 0;
 }
+.gnbMenu .titleItem ul{
+  position: absolute;
+  left: 100px
+}
+
+
 .gnbMenu li+li:hover{
   background-color: #757575;
 
 
 }
-
 #logo a {
   display: block;
   background: url("../images/logo_2021.svg") no-repeat;
@@ -178,18 +184,22 @@ header .container .user_menu {
 footer {
   margin-bottom: 48px;
 }
-footer nav .footerTitle {
+footer .f_txt .footerTitle {
   font-size: var(--T-footerNav-size);
   color: var(--C-footerNav);
   font-weight: var(--T-weight-bold);
   gap: 20px;
 }
-footer > div,
-footer > p {
+footer .f_txt > div,
+footer .f_txt > p {
   font-size: var(--T-footerContent-size);
   line-height: var(--T-footerContent-height);
   color: var(--C-footerDesc);
   margin-top: 27px;
+}
+
+footer .f-l-p span{
+  font-weight: var(--T-weight-bold);
 }
 
 footer .f-r-p {

@@ -29,7 +29,17 @@
             <ul class="gnbMenu hidden">
               <li><h3>women</h3></li>
               <li><hr></li>
-              <li><a href="#">outer 아우터</a></li>
+              <li class="titleItem d-flex">
+                <a href="#">outer 아우터</a>
+                <ul>
+                  <li>아우터 모두 보기</li>
+                  <li>경량 패딩</li>
+                  <li>캐쥬얼(블루종 , 파카)</li>
+                  <li>블레이저(셋업 추천)</li>
+                  <li>패딩(다운)</li>
+                  <li>후리스</li>
+                </ul>  
+              </li>
               <li><a href="#">tops 상의</a></li>
               <li><a href="#">pants 팬츠</a></li>
               <li><a href="#">dressㆍskirt 원피스ㆍ스커트</a></li>
@@ -40,6 +50,7 @@
               <li><a href="#">homewear 홈웨어</a></li>
               <li><a href="#">accessories 액세서리</a></li>
             </ul>
+            
           </li>
           <li class="gnbTitle">
             <a href="">men</a>
@@ -130,7 +141,7 @@
         </ul>
       </section>
     </header>
-    <main>
+    <main class="d-flex f-d-c">
       <section class="videoContainer">
         <a href="#">
           <video muted autoplay loop>
@@ -337,11 +348,7 @@
     </main>
     <hr />
     <footer class="d-flex f-d-c ai-c">
-      <!-- 선생님 피드백을 수용해서 nav밖으로 div와 copyright를 밖으로 빼내었는데
-           디자인에서 의도한대로 요소들이 가운데에 있되 왼쪽정렬된 상태로 둘 방법을 못 찾겠습니다.
-           방법이 있을까요?
-      -->
-      <nav class="f_txt">
+      <div class="f_txt">
         <ul class="footerTitle d-flex">
           <li><a href="#">주문/배송조회</a></li>
           <li><a href="#">매장안내</a></li>
@@ -354,50 +361,52 @@
           <li><a href="#" class="strong">개인정보처리방침</a></li>
           <li><a href="#">예치금 조회/환급</a></li>
         </ul>
-      </nav>
-      <div class="d-flex">
-        <ul class="f-l-p">
-          <li>에프알엘코리아(주) 대표 : 정현석, 하타세 사토시</li>
-          <li>주소 : 서울시 송파구 올림픽로 300(롯데월드타워 24층)</li>
-          <li>통신판매업신고번호 : 2019-서울송파-2369</li>
-          <li>
-            사업자등록번호 : 104-81-91189<a href="#" target="_blank"
-              >사업자 정보 확인</a
-            >
-          </li>
-          <li>호스팅서비스사업자 : 롯데쇼핑(주) e커머스사업부</li>
-        </ul>
-        <ul class="f-r-p d-flex f-d-c">
-          <li>
-            <h3>
-              KEB 하나은행 구매안전서비스 (채무지급보증)<a href=""
-                >자세히 보기</a
+        <div class="d-flex">
+          <ul class="f-l-p">
+            <li><span>에프알엘코리아(주) 대표 :</span> 정현석, 하타세 사토시</li>
+            <li><span>주소 :</span> 서울시 송파구 올림픽로 300(롯데월드타워 24층)</li>
+            <li><span>통신판매업신고번호 :</span> 2019-서울송파-2369</li>
+            <li>
+              <span>사업자등록번호 :</span> 104-81-91189<a href="#" target="_blank"
+                >사업자 정보 확인</a
               >
-            </h3>
-            <p>
-              당사는 고객님이 현금 결제한 금액에 대해 KEB 하나은행과
-              채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
-            </p>
-          </li>
-          <li>
-            <h3>
-              콘텐츠산업진흥법에 의한 콘텐츠보호안내
-              <a href="">자세히 보기</a>
-            </h3>
-          </li>
-          <li>
-            <h3>고객만족센터</h3>
-            <p>
-              TEL : 080-722-3300 FAX : 02-3213-7960 E-mail:
-              <a href="mailto:uniqlocs@uniqlo.co.kr">uniqlocs@uniqlo.co.kr</a>
-            </p>
-          </li>
-        </ul>
+            </li>
+            <li><span>호스팅서비스사업자 :</span> 롯데쇼핑(주) e커머스사업부</li>
+          </ul>
+          <ul class="f-r-p d-flex f-d-c">
+            <li>
+              <h3>
+                KEB 하나은행 구매안전서비스 (채무지급보증)<a href=""
+                  >자세히 보기</a
+                >
+              </h3>
+              <p>
+                당사는 고객님이 현금 결제한 금액에 대해 KEB 하나은행과
+                채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.
+              </p>
+            </li>
+            <li>
+              <h3>
+                콘텐츠산업진흥법에 의한 콘텐츠보호안내
+                <a href="">자세히 보기</a>
+              </h3>
+            </li>
+            <li>
+              <h3>고객만족센터</h3>
+              <p>
+                TEL : 080-722-3300 FAX : 02-3213-7960 E-mail:
+                <a href="mailto:uniqlocs@uniqlo.co.kr">uniqlocs@uniqlo.co.kr</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <p class="copyright">
+          유니클로 공식 온라인스토어는 롯데 LECS(www.lecs.com)를 이용하고
+          있습니다. | COPYRIGHT(C) UNIQLO CO., LTD. ALL RIGHTS RESERVED
+        </p>
       </div>
-      <p class="copyright">
-        유니클로 공식 온라인스토어는 롯데 LECS(www.lecs.com)를 이용하고
-        있습니다. | COPYRIGHT(C) UNIQLO CO., LTD. ALL RIGHTS RESERVED
-      </p>
+      
+      
       <ul class="sns d-flex">
         <li>
           <a href=""><i class="fa-brands fa-square-facebook"></i></a>
