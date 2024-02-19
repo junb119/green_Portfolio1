@@ -62,7 +62,7 @@ section {
 header .container {
   /* width: 1720px; */
 
-  height: 100%;
+  /* height: 100%; */
 }
 .d-flex {
   display: flex;
@@ -91,7 +91,8 @@ header .container {
 /* ---------------------------------------------------header */
 
 header {
-  background-color: rgba(217, 217, 217, 0.2);
+  background: linear-gradient(rgba(217, 217, 217, 0.2) 0 , rgba(217, 217, 217, 0.2) 70px, #000 70px);
+  /* background-color: rgba(217, 217, 217, 0.2); */
   box-sizing: border-box;
   position: fixed;
   color: var(--C-white);
@@ -145,7 +146,7 @@ header .container .gnb {
   right:0;
   padding: 5px 0;
 }
-.gnbMenu li:hover{
+.gnbMenu li+li:hover{
   background-color: #757575;
 
 
@@ -157,6 +158,7 @@ header .container .gnb {
   width: 40px;
   height: 40px;
   text-indent: -9999em;
+  ;
 }
 header .container .user_menu {
   gap: 40px;

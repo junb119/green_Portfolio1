@@ -1,23 +1,20 @@
-// ---------------------------header
-const header = document.querySelector('header')
-const headerHeight = header.offsetHeight
-const gnbTitle = header.querySelectorAll('.gnbTitle')
+  const header = document.querySelector('header')
+  const headerHeight = header.offsetHeight
+  const gnbTitle = header.querySelectorAll('.gnbTitle')
+
+  console.log('header test')
 
 
-console.log(gnbTitle)
-for (let title of gnbTitle) {
-  title.addEventListener('mouseenter', ()=> {
-    header.style.height = title.querySelector('.gnbMenu').offsetHeight + 'px'
-    console.log(header.offsetHeight)
-  })
+  for (let title of gnbTitle) {
+    title.addEventListener('mouseenter', ()=> {
+      header.style.height = title.querySelector('.gnbMenu').offsetHeight + headerHeight + 16 + 'px'
+      console.log(header.offsetHeight)
+    })
 
-  title.addEventListener('mouseleave', ()=> {
-    header.style.height = headerHeight + 'px'
-  })
-}
-
-
-
+    title.addEventListener('mouseleave', ()=> {
+      header.style.height = headerHeight + 'px'
+    })
+  }
 
 const slideWrapper = document.querySelector(".slideWrapper");
 const slideContainer = slideWrapper.querySelector(".slideContainer");
