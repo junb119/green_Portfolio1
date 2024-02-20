@@ -202,6 +202,10 @@ header .container .user_menu {
   gap: 5px;
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
 }
+.user_menu a:hover {
+  color:aqua
+}
+
 .user_menu .menuicon {
   font-size: var(--T-menuIcon-size);
 }

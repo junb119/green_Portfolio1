@@ -4,7 +4,7 @@ const headerHeight = header.offsetHeight;
 const gnbTitle = header.querySelectorAll(".gnbTitle");
 
 for (let title of gnbTitle) {
-  title.addEventListener("mouseenter", () => {
+  title.addEventListener("mouseover", () => {
     title.querySelector(".gnbMenu").style.display = "block";
     console.log(title.querySelector(".gnbMenu").offsetHeight);
 
@@ -14,7 +14,7 @@ for (let title of gnbTitle) {
     // console.log(header.offsetHeight)
   });
 
-  title.addEventListener("mouseleave", () => {
+  title.addEventListener("mouseout", () => {
     header.style.height = headerHeight + "px";
     title.querySelector(".gnbMenu").style.display = "none";
   });
