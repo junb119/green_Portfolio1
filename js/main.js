@@ -30,9 +30,19 @@ const items = itemsWrapper.querySelector(".items");
 const slideWrapper = document.querySelector(".slideWrapper");
 const slideContainer = slideWrapper.querySelector(".slideContainer");
 const slides = slideContainer.querySelectorAll("li");
-const slidesCount = slides.length;
-const slideToShow = 3;
+let curruntIdx = 0;
 
+const slidesCount = slides.length;
+
+function moveSlide(idx) {
+
+}
+
+
+
+
+
+// 슬라이드 반응형
 function resizeSlide() {
   let bodyWidth = document.body.offsetWidth;
   for (let slide of slides) {
@@ -41,11 +51,11 @@ function resizeSlide() {
   }
   slides[0].style.marginLeft = 0;
   slideContainer.style.width = bodyWidth * 0.3 * slides.length + "px";
+
 }
 resizeSlide();
 
 window.addEventListener("resize", () => {
-  console.log(document.body.offsetWidth * 0.3);
   resizeSlide();
 });
 
