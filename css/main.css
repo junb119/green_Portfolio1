@@ -17,7 +17,7 @@ main .videoContainer {
 
   background-color: #000;
 } */
-main .videoContainer > a::before {
+main .videoContainer > a::after {
   content: "";
   position: absolute;
   top: 0;
@@ -100,6 +100,7 @@ main .videoContainer video {
 
 .slideWrapper {
   width: 100%;
+  position: relative;
   /* overflow: hidden; */
 }
 .slideContainer {
@@ -113,8 +114,26 @@ main .videoContainer video {
 }
 .slideContainer > li img {
   width: 100%;
-  
 }
+
+.slideControl span{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: calc(var(--T-mainTitle-size) * 3);
+  font-weight:100;
+  color: var(--C-white);
+  text-shadow: 2px 2px 3px #000;
+}
+.slideControl span:hover{
+  cursor: pointer;
+  color: var(--C-footerDesc)
+}
+
+.slideControl .nextBtn span{
+  right:0;
+}
+
 
 /* ----------------------------secondary_items section */
 .secondary_items {
