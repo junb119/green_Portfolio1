@@ -4,9 +4,11 @@ const headerHeight = header.offsetHeight;
 const gnbTitle = header.querySelectorAll(".gnbTitle");
 
 for (let title of gnbTitle) {
-  title.addEventListener("mouseover", () => {
-    title.querySelector(".gnbMenu").style.display = "block";
-    console.log(title.querySelector(".gnbMenu").offsetHeight);
+  title.querySelector("a").addEventListener("mouseover", () => {
+    for (let titleAll of gnbTitle) {
+      titleAll.querySelector(".gnbMenu").classList.add("hidden");
+    }
+    title.querySelector(".gnbMenu").classList.remove("hidden");
 
     header.style.height =
       title.querySelector(".gnbMenu").offsetHeight + headerHeight + 16 + "px";
@@ -14,10 +16,10 @@ for (let title of gnbTitle) {
     // console.log(header.offsetHeight)
   });
 
-  title.addEventListener("mouseout", () => {
-    header.style.height = headerHeight + "px";
-    title.querySelector(".gnbMenu").style.display = "none";
-  });
+  // title.addEventListener("mouseout", () => {
+  //   header.style.height = headerHeight + "px";
+  //   title.querySelector(".gnbMenu").classList.add('hidden')
+  // });
 }
 // ------------------------items
 
@@ -34,13 +36,7 @@ let curruntIdx = 0;
 
 const slidesCount = slides.length;
 
-function moveSlide(idx) {
-
-}
-
-
-
-
+function moveSlide(idx) {}
 
 // 슬라이드 반응형
 function resizeSlide() {
@@ -51,7 +47,6 @@ function resizeSlide() {
   }
   slides[0].style.marginLeft = 0;
   slideContainer.style.width = bodyWidth * 0.3 * slides.length + "px";
-
 }
 resizeSlide();
 

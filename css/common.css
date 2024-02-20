@@ -91,11 +91,7 @@ header .container {
 /* ---------------------------------------------------header */
 
 header {
-  background: linear-gradient(
-    rgba(217, 217, 217, 0.2) 0,
-    rgba(217, 217, 217, 0.2) 70px,
-    #000 70px
-  );
+  background: linear-gradient(rgba(217, 217, 217, 0.2) 70px, #000 70px);
   /* background-color: rgba(217, 217, 217, 0.2); */
   box-sizing: border-box;
   position: fixed;
@@ -127,14 +123,8 @@ header .container .gnb {
   font-size: var(--T-header-size);
   font-weight: var(--T-weight-bold);
   line-height: 70px;
-  text-transform: uppercase;
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
 }
-
-/* .gnb .gnbTitle:hover .gnbMenu {
-  display: block;
-} */
-
 .gnbMenu {
   position: absolute;
   left: 0;
@@ -150,7 +140,7 @@ header .container .gnb {
   background-color: #fff;
 }
 
-.gnbMenu li a {
+.gnbMenu .titleItem a {
   display: block;
   left: 0;
   right: 0;
@@ -161,10 +151,11 @@ header .container .gnb {
   top: 10%;
   left: calc(100% + 50px);
   white-space: nowrap;
+  padding-left: 50px;
 }
-.titleItem:hover ul {
+/* .titleItem:hover ul {
   display: block;
-}
+} */
 .gnbMenu h3 {
   padding-top: 16px;
   position: relative;
@@ -180,7 +171,7 @@ header .container .gnb {
   background: #fff;
 }
 
-.gnbMenu li + li:hover {
+.gnbMenu li:hover {
   background-color: #757575;
 }
 #logo {
@@ -203,7 +194,7 @@ header .container .user_menu {
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
 }
 .user_menu a:hover {
-  color:aqua
+  color: aqua;
 }
 
 .user_menu .menuicon {
