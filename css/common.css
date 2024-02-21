@@ -109,7 +109,10 @@ header.scrollDown {
 
   /* background: rgba(245,245,220, 0.9); */
 }
-
+header.scrollDown .gnb .gnbTitle > a,
+header.scrollDown .user_menu a{
+  text-shadow: none;
+}
 
 header .container {
   /* align-items: start; */

@@ -154,10 +154,23 @@ main .videoContainer video {
 
   /* overflow: hidden; */
 }
+.secondary_items .l-items,
+.secondary_items .r-items {
+  position: relative;
+}
+
+
 .secondary_items img {
+  opacity: 0;
+  visibility: 0;
   width: 100%;
+  transition:.5s;
   /* height: auto; */
   /* object-fit: cover; */
+}
+.secondary_items li.active img {
+  opacity: 1;
+  visibility: 1;
 }
 
 .secondary_title {
