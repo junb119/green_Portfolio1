@@ -5,9 +5,6 @@ export function headerModule() {
     const headerHeight = header.offsetHeight
     const gnbTitle = header.querySelectorAll('.gnbTitle')
 
-    console.log('header test')
-
-
     for (let title of gnbTitle) {
       title.addEventListener('mouseenter', ()=> {
         header.style.height = title.querySelector('.gnbMenu').offsetHeight + 'px'

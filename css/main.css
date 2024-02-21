@@ -112,7 +112,7 @@ main .videoContainer video {
   display: flex;
 }
 .slideContainer > li {
-  opacity: .7;
+  opacity: .6;
   flex-shrink: 0;
   transition: .3s;
 }

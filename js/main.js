@@ -1,20 +1,54 @@
-// ---------------------------header
-const header = document.querySelector("header");
-const headerHeight = header.offsetHeight;
-const gnbTitle = header.querySelectorAll(".gnbTitle");
+// common
+let currentScroll = 0; // 스크롤양 초깃값
 
+
+
+// ---------------------------header
+const header = document.querySelector("header"); 
+const headerHeight = header.offsetHeight; // 헤더높이 초깃값
+const gnbTitle = header.querySelectorAll(".gnbTitle"); //헤더 왼쪽 목록
+const headerCloseBtn = header.querySelector('.headerCloseBtn') // 헤더 닫기 버튼 
 for (let title of gnbTitle) {
+  // 헤더 목록 표시
   title.querySelector("a").addEventListener("mouseover", () => {
     for (let titleAll of gnbTitle) {
-      titleAll.querySelector(".gnbMenu").classList.add("hidden");
+      titleAll.querySelector(".gnbMenu").classList.add("hidden"); // 나머지 하위 항목 안보이기
     }
-    title.querySelector(".gnbMenu").classList.remove("hidden");
+    title.querySelector(".gnbMenu").classList.remove("hidden"); //활성화된 하위 항목 보이기
 
     header.style.height =
-      title.querySelector(".gnbMenu").offsetHeight + headerHeight + 16 + "px";
+      title.querySelector(".gnbMenu").offsetHeight + headerHeight + 16 + "px"; // 헤더 높이 늘이기
+      headerCloseBtn.classList.remove('hidden') // 닫기 버튼 표시
 
-    // console.log(header.offsetHeight)
+
+    const titleItems = title.querySelectorAll('.titleItem') // 하위 항목 선택
+
+    for (let ti of titleItems) {
+      ti.addEventListener('mouseenter', ()=> {
+        for (let tis of titleItems){
+          tis.classList.remove('active')
+          // 활성화된 다른 하위 항목 비활성화
+        }
+        ti.classList.add('active')
+      })
+      // 선택된 하위 항목 활성화
+      // css-> 최하위 항목 보이기
+      
+    } 
+
+      
   });
+
+headerCloseBtn.addEventListener('click', closeHaeder
+) // 닫기버튼-> 헤더 닫기
+
+function closeHaeder() {
+  for (let titleAll of gnbTitle) {
+    titleAll.querySelector(".gnbMenu").classList.add("hidden");
+  }
+  headerCloseBtn.classList.add('hidden')
+  header.style.height = headerHeight +'px'
+}
 
   // title.addEventListener("mouseout", () => {
   //   header.style.height = headerHeight + "px";
@@ -61,6 +95,17 @@ const appTitle = appTextContainer.querySelector("h2");
 const appDesc = appTextContainer.querySelector("h3");
 
 window.addEventListener("scroll", () => {
+  if (scrollY > 600) {
+    header.classList.add('scrollDown')
+  } else {
+    header.classList.remove('scrollDown')
+  }
+  
+  if (scrollDownJudge(currentScroll)) {
+    closeHaeder()
+  }
+
+
   showToRight(appTextContainer, appTitle, scrollY);
   showToRight(appTextContainer, appDesc, scrollY);
   showToUp(itemsWrapper, itemsH2, scrollY);
@@ -90,4 +135,21 @@ function showToRight(container, target, scrollMount) {
     target.style.opacity = 0;
     target.style.visibility = "hidden";
   }
+}
+
+
+
+
+function scrollDownJudge (prevScroll) {
+  if (prevScroll < scrollY) {
+    console.log('scrolldown')
+    currentScroll = scrollY
+    return true
+
+  } else {
+    console.log('scrollup')
+    currentScroll = scrollY
+    return false
+  }
+  
 }
