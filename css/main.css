@@ -150,27 +150,33 @@ main .videoContainer video {
 .secondary_items {
   position: relative;
   width: 100%;
-  height: auto;
+  
 
   /* overflow: hidden; */
 }
 .secondary_items .l-items,
 .secondary_items .r-items {
+
   position: relative;
+
+}
+.secondary_items li {
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition:.5s;
+  position: absolute;
 }
 
-
 .secondary_items img {
-  opacity: 0;
-  visibility: 0;
   width: 100%;
-  transition:.5s;
+  
   /* height: auto; */
   /* object-fit: cover; */
 }
-.secondary_items li.active img {
+.secondary_items li.active  {
   opacity: 1;
-  visibility: 1;
+  visibility: visible;
 }
 
 .secondary_title {
@@ -194,6 +200,8 @@ main .videoContainer video {
 }
 
 /* -------------------- magazine section */
+
+
 .magazine .m-list {
   flex-wrap: wrap;
   /* gap: 5%; */
