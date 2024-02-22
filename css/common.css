@@ -91,7 +91,7 @@ header .container {
 /* ---------------------------------------------------header */
 
 header {
-  background: linear-gradient(rgba(217, 217, 217, 0.2) 70px,  rgba(0, 0, 0, 1) );
+  background: linear-gradient(rgba(217, 217, 217, 0.2) 70px, rgba(0, 0, 0, 1));
   /* background-color: rgba(217, 217, 217, 0.2); */
   box-sizing: border-box;
   position: fixed;
@@ -104,13 +104,13 @@ header {
 
 header.scrollDown {
   /* color: var(--C-appBody); */
-  color:#000;
-  background: linear-gradient(var(--C-white) 70px,  rgba(245,245,220, 0.9) );
+  color: #000;
+  background: linear-gradient(var(--C-white) 70px, rgba(245, 245, 220, 0.9));
 
   /* background: rgba(245,245,220, 0.9); */
 }
 header.scrollDown .gnb .gnbTitle > a,
-header.scrollDown .user_menu a{
+header.scrollDown .user_menu a {
   text-shadow: none;
 }
 
@@ -188,18 +188,16 @@ header .container .gnb {
 
 .gnbMenu li:hover {
   background-color: var(--C-footerDesc);
-  
 }
-header.scrollDown .gnbMenu li:hover{
+header.scrollDown .gnbMenu li:hover {
   background-color: var(--C-white);
 }
-
 
 #logo {
   position: absolute;
   left: 50%;
   top: 15px;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
 }
 
 #logo a {
@@ -227,7 +225,7 @@ header .container .user_menu {
 .user_menu div {
   font-size: var(--T-menuText-size);
 }
-.top-menu{
+.top-menu {
   display: flex;
   justify-content: flex-end;
   position: relative;
@@ -235,28 +233,27 @@ header .container .user_menu {
 header .search {
   height: 70px;
   display: flex;
-  width:0;
-  overflow:hidden;  
-  transition:width 0.3s;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
   position: absolute;
   right: 100%;
 }
-header .search.active{
+header .search.active {
   width: 100%;
 }
 
 .user_menu .searchBtn {
-  
 }
 .headerCloseBtn {
   position: absolute;
-  top:100px;
-  left:80%;
+  top: 100px;
+  left: 80%;
   padding: 10px;
   background-color: #ebebeb;
   border: 1px solid #000;
   border-radius: 5px;
-  color: var(--C-appBody)
+  color: var(--C-appBody);
 }
 .headerCloseBtn:hover {
   background-color: var(--C-footerDesc);
@@ -322,19 +319,78 @@ footer .sns {
   font-size: 36px;
   /* 툴팁만들기 */
 }
-.navigator{
-  position:fixed;
-  width: 48px;
-  height: 48px;
-  right:0px;
-  bottom : 200px;
-  text-align: center;
-  background: #000;
-  color: var(--C-white);
-  
-  
+
+.navigator {
+  position: fixed;
+  width: 60px;
+  height: 200px;
+  bottom: 50px;
+  right: 150px;
 }
 
-.navigator .backToTop{
-  
+.backToTop,
+.cart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  background-color: #444;
+  border-radius: 50%;
+  color: #fff;
+  opacity: 0;
+  /* visibility: hidden; */
+  pointer-events: none;
+  transition: 0.5s;
+}
+.backToTop.active {
+  opacity: 0.9;
+  /* visibility: visible; */
+  pointer-events: auto;
+}
+
+.navigator.active .cart {
+  bottom: 80px;
+  opacity: 0.9;
+  pointer-events: auto;
+}
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tip {
+  position: absolute;
+  padding: 1em;
+  font-size: var(--T-footerContent-size);
+  font-weight: normal;
+  background: #34495e;
+  border-radius: 1em;
+  color: #fff;
+  white-space: nowrap;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0px;
+  opacity: 0;
+  transition: 0.4s;
+}
+.tooltip:hover .tip {
+  opacity: 1;
+  /* margin-left: 20px; */
+}
+
+.tooltip .tip:after {
+  content: "";
+  position: absolute;
+  /* width: 0px;
+  height: 0px; */
+  border-width: 6px 8px;
+  border-style: solid;
+  border-color: #34495e transparent transparent transparent;
+  /* background-color: red; */
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
 }
