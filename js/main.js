@@ -61,8 +61,11 @@ function closeHaeder() {
 const searchIcon = header.querySelector('.user_menu .searchIcon')
 const searchInput = header.querySelector('.search')
 const searchBtn = header.querySelector('.searchBtn')
+
 searchIcon.addEventListener('click', () => {
-  searchInput.classList.remove('hidden')
+
+  searchInput.classList.add('active')
+
 })
 
 
@@ -103,6 +106,33 @@ window.addEventListener("resize", () => {
   resizeSlide();
 });
 
+// -------------------------------secondary
+const litemsContainer = document.querySelector('.l-items')
+const ritemsContainer = document.querySelector('.r-items')
+const litems = litemsContainer.querySelectorAll('.l-items li')
+const ritems = ritemsContainer.querySelectorAll('.r-items li')
+
+repeatImgChange(litemsContainer, litems)
+setTimeout(() => {
+  repeatImgChange(ritemsContainer, ritems)  
+}, 1500);
+
+function repeatImgChange(parent, list) {
+  let activeItem = 0;
+  setInterval(() => {
+    console.log(activeItem)
+    parent.querySelector('.active').classList.remove('active')
+    list[activeItem].classList.add('active')
+    activeItem = (activeItem + 1) % list.length 
+  }, 3000);
+}
+
+
+
+
+
+
+
 // ------------------------------app
 
 const appTextContainer = document.querySelector(".app .textContainer");
@@ -129,7 +159,7 @@ window.addEventListener("scroll", () => {
 });
 
 function showToUp(container, target, scrollMount) {
-  if (scrollMount > container.offsetTop - 600) {
+  if (scrollMount > container.offsetTop - 700) {
     target.style.transform = "translateY(0%)";
     target.style.opacity = 1;
     target.style.visibility = "visible";
@@ -141,7 +171,7 @@ function showToUp(container, target, scrollMount) {
 }
 
 function showToRight(container, target, scrollMount) {
-  if (scrollMount > container.offsetTop - 600) {
+  if (scrollMount > container.offsetTop - 700) {
     target.style.transform = "translateX(0%)";
     target.style.opacity = 1;
     target.style.visibility = "visible";

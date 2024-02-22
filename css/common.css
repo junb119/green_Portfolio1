@@ -196,7 +196,10 @@ header.scrollDown .gnbMenu li:hover{
 
 
 #logo {
-  padding-top: 15px;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform:translateX(-50%);
 }
 
 #logo a {
@@ -224,10 +227,22 @@ header .container .user_menu {
 .user_menu div {
   font-size: var(--T-menuText-size);
 }
-
-.user_menu .search {
+.top-menu{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+header .search {
   height: 70px;
   display: flex;
+  width:0;
+  overflow:hidden;  
+  transition:width 0.3s;
+  position: absolute;
+  right: 100%;
+}
+header .search.active{
+  width: 100%;
 }
 
 .user_menu .searchBtn {
@@ -306,4 +321,20 @@ footer .sns {
   gap: 25px;
   font-size: 36px;
   /* 툴팁만들기 */
+}
+.navigator{
+  position:fixed;
+  width: 48px;
+  height: 48px;
+  right:0px;
+  bottom : 200px;
+  text-align: center;
+  background: #000;
+  color: var(--C-white);
+  
+  
+}
+
+.navigator .backToTop{
+  
 }
