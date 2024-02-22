@@ -225,6 +225,14 @@ header .container .user_menu {
   font-size: var(--T-menuText-size);
 }
 
+.user_menu .search {
+  height: 70px;
+  display: flex;
+}
+
+.user_menu .searchBtn {
+  
+}
 .headerCloseBtn {
   position: absolute;
   top:100px;

@@ -55,6 +55,21 @@ function closeHaeder() {
   //   title.querySelector(".gnbMenu").classList.add('hidden')
   // });
 }
+
+
+// 검색 버튼
+const searchIcon = header.querySelector('.user_menu .searchIcon')
+const searchInput = header.querySelector('.search')
+const searchBtn = header.querySelector('.searchBtn')
+searchIcon.addEventListener('click', () => {
+  searchInput.classList.remove('hidden')
+})
+
+
+
+
+
+
 // ------------------------items
 
 const itemsWrapper = document.querySelector(".itemsWrapper");
