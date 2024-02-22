@@ -262,7 +262,7 @@ header .search.active {
 
 /* ---------------------------------------------------footer */
 footer {
-  margin-bottom: 48px;
+  margin: 24px 0 48px;
 }
 footer .f_txt .footerTitle {
   font-size: var(--T-footerNav-size);
