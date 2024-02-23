@@ -51,13 +51,37 @@ for (let title of gnbTitle) {
 }
 
 // 검색 버튼
-const searchIcon = header.querySelector(".user_menu .searchIcon");
-const searchInput = header.querySelector(".search");
-const searchBtn = header.querySelector(".searchBtn");
+const searchBox = header.querySelector(".search");
+const searchInput = searchBox.querySelector('input')
+const searchBtn = searchBox.querySelector(".searchBtn.submit");
+const searchClose = searchBox.querySelector(".searchBtn.close");
+const searchIcon = document.querySelector(".user_menu .searchIcon");
 
-searchIcon.addEventListener("click", () => {
-  searchInput.classList.add("active");
+searchIcon.addEventListener("click", (e) => {
+  e.preventDefault()
+  searchIcon.classList.add('unvisible')
+  searchBox.classList.add("active");
+  setTimeout(() => {
+    console.log('test')
+    searchBtn.classList.remove("hidden");
+    searchClose.classList.remove("hidden");
+  }, 300);
 });
+
+
+
+
+
+searchClose.addEventListener('click', ()=> {
+  // e.preventDefault()
+  searchIcon.classList.remove('unvisible')
+  searchBox.classList.remove("active");
+  searchBtn.classList.add("hidden");
+  searchClose.classList.add("hidden");  
+  
+  
+})
+
 
 // ------------------------items
 
@@ -67,26 +91,47 @@ const itemsH3 = itemsWrapper.querySelector("h3");
 const items = itemsWrapper.querySelector(".items");
 
 // -----------------------slide
+
 const slideWrapper = document.querySelector(".slideWrapper");
 const slideContainer = slideWrapper.querySelector(".slideContainer");
-const slides = slideContainer.querySelectorAll("li");
+let slides = slideContainer.querySelectorAll("li");
+let slideWidth 
+let slideMarginLeft
 let curruntIdx = 0;
-
 const slidesCount = slides.length;
+const slideControl = slideContainer.querySelector('.slideControl')
+const prevBtn = slideControl.querySelector('.prevBtn')
+const nextBtn = slideControl.querySelector('.nextBtn')
 
-function moveSlide(idx) {}
 
-// 슬라이드 반응형
+
+prevBtn.addEventListener('click', ()=> {
+  
+})
+
+
+
+
+function moveSlide(idx) {
+  
+  curruntIdx = idx
+}
+
+
+// 브라우저 너비대비 슬라이드 크기 변경
 function resizeSlide() {
   let bodyWidth = document.body.offsetWidth;
   for (let slide of slides) {
-    slide.style.width = bodyWidth * 0.3 + "px";
-    slide.style.marginLeft = bodyWidth * 0.05 + "px";
+    slideWidth = bodyWidth * 0.3 
+    slideMarginLeft = bodyWidth * 0.05
+
+    slide.style.width = slideWidth + 'px'
+    slide.style.marginLeft = slideMarginLeft + "px";
   }
   slides[0].style.marginLeft = 0;
   slideContainer.style.width = bodyWidth * 0.3 * slides.length + "px";
 }
-resizeSlide();
+
 
 window.addEventListener("resize", () => {
   resizeSlide();

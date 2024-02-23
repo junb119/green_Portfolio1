@@ -141,3 +141,12 @@ video {
 button{
   background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer
 }
+/* input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+} */
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
