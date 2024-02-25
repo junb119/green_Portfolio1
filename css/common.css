@@ -200,7 +200,8 @@ header .container .gnb {
 .gnbMenu li:hover {
   background-color: var(--C-footerDesc);
 }
-.gnbMenu li.nonehover:hover {
+.gnbMenu li.nonehover:hover,
+header.scrollDown .gnbMenu li.nonehover:hover {
   background-color: transparent;
 }
 

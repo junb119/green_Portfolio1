@@ -1,3 +1,39 @@
+// import fetchData from "./data.js";
+
+// fetchData 함수 호출
+// fetchData().then((datas) => {
+//   // JSON 데이터 사용
+//   console.log(datas);
+
+//   console.log(datas.length);
+
+//   const videoContainer = document.querySelector(".videoContainer");
+//   videoContainer.innerHTML += "<div class='videoTitle'></div>";
+//   const videoTitle = videoContainer.querySelector(".videoTitle");
+//   for (let data of datas) {
+//     videoTitle.innerHTML += `<a href="#">${data.title}</a>`;
+//   }
+
+//   function setSection(idx) {
+//     let target = datas[idx];
+//     console.log(target.video);
+//     videoContainer.querySelector("video").innerHTML = `
+//     <source
+//       src="${target.video}"
+//       type="video/mp4"
+//     />
+//     `;
+//   }
+//   videoTitle.querySelectorAll("a").forEach((vt, idx) => {
+//     vt.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       setSection(idx);
+//       console.log(setSection(idx))
+//     });
+//   });
+//   setSection(0);
+// });
+
 // common
 let currentScroll = 0; // 스크롤양 초깃값
 
@@ -30,8 +66,8 @@ function cookieCheck(name) {
 }
 cookieCheck("uniclo");
 
-/* 
-  popupClose 클릭 시, 
+/*
+  popupClose 클릭 시,
     팝업 display none
     dontSee에 체크 되어있다면,
       쿠키 생성,아니라면 쿠키 만료.
@@ -78,9 +114,9 @@ for (let title of gnbTitle) {
     }
   });
 
-  headerCloseBtn.addEventListener("click", closeHaeder); // 닫기버튼-> 헤더 닫기
+  headerCloseBtn.addEventListener("click", closeHeader); // 닫기버튼-> 헤더 닫기
 
-  function closeHaeder() {
+  function closeHeader  () {
     for (let titleAll of gnbTitle) {
       titleAll.querySelector(".gnbMenu").classList.add("hidden");
     }
@@ -136,7 +172,7 @@ let slideWidth;
 let slideMarginLeft;
 let slideToShow = 3;
 let curruntIdx = 0;
-let timer;
+let slideTimer;
 const slidesCount = slides.length;
 const slideControl = slideWrapper.querySelector(".slideControl");
 const prevBtn = slideControl.querySelector(".prevBtn");
@@ -159,17 +195,17 @@ pagers.forEach((pager, idx) => {
 });
 
 function autoSlide() {
-  timer = setInterval(() => {
+  slideTimer = setInterval(() => {
     if (curruntIdx >= slidesCount - slideToShow) {
       moveSlide(0);
     } else moveSlide(curruntIdx + 1);
   }, 3000);
 }
 
-slideContainer.addEventListener("mouseenter", () => {
-  clearInterval(timer);
+slideWrapper.addEventListener("mouseenter", () => {
+  clearInterval(slideTimer);
 });
-slideContainer.addEventListener("mouseleave", () => {
+slideWrapper.addEventListener("mouseleave", () => {
   autoSlide();
 });
 autoSlide();
@@ -183,7 +219,9 @@ function moveSlide(idx) {
 
   if (curruntIdx === 0) {
     prevBtn.style.display = "none";
+    nextBtn.style.display = "";
   } else if (curruntIdx === slidesCount - slideToShow) {
+    prevBtn.style.display = "";
     nextBtn.style.display = "none";
   } else {
     prevBtn.style.display = "";
@@ -215,21 +253,37 @@ const litemsContainer = document.querySelector(".l-items");
 const ritemsContainer = document.querySelector(".r-items");
 const litems = litemsContainer.querySelectorAll(".l-items li");
 const ritems = ritemsContainer.querySelectorAll(".r-items li");
+let litemActive = 0;
+let ritemActive = 0;
 
-repeatImgChange(litemsContainer, litems);
+let litemRepeat = repeatImgChange(litemsContainer, litems, litemActive);
+let ritemRepeat;
 setTimeout(() => {
-  repeatImgChange(ritemsContainer, ritems);
+  ritemRepeat = repeatImgChange(ritemsContainer, ritems, ritemActive);
 }, 1500);
 
-function repeatImgChange(parent, list) {
-  let activeItem = 0;
-  setInterval(() => {
+function repeatImgChange(parent, list, activeItem) {
+  return setInterval(() => {
     console.log(activeItem);
     parent.querySelector(".active").classList.remove("active");
     list[activeItem].classList.add("active");
     activeItem = (activeItem + 1) % list.length;
   }, 3000);
 }
+
+litemsContainer.addEventListener("mouseenter", () => {
+  clearInterval(litemRepeat);
+});
+litemsContainer.addEventListener("mouseleave", () => {
+  litemRepeat = repeatImgChange(litemsContainer, litems, litemActive);
+});
+
+ritemsContainer.addEventListener("mouseenter", () => {
+  clearInterval(ritemRepeat);
+});
+ritemsContainer.addEventListener("mouseleave", () => {
+  ritemRepeat = repeatImgChange(ritemsContainer, ritems, ritemActive);
+});
 
 // ------------------------------app
 
@@ -238,6 +292,12 @@ const appTitle = appTextContainer.querySelector("h2");
 const appDesc = appTextContainer.querySelector("h3");
 
 window.addEventListener("scroll", () => {
+  showToUp(itemsWrapper, itemsH2, scrollY);
+  showToUp(itemsWrapper, itemsH3, scrollY);
+  showToUp(itemsWrapper, items, scrollY);
+  showToRight(appTextContainer, appTitle, scrollY);
+  showToRight(appTextContainer, appDesc, scrollY);
+  
   if (scrollY > 600) {
     header.classList.add("scrollDown");
   } else {
@@ -245,14 +305,9 @@ window.addEventListener("scroll", () => {
   }
 
   if (scrollDownJudge(currentScroll)) {
-    closeHaeder();
+    closeHeader();
   }
-
-  showToRight(appTextContainer, appTitle, scrollY);
-  showToRight(appTextContainer, appDesc, scrollY);
-  showToUp(itemsWrapper, itemsH2, scrollY);
-  showToUp(itemsWrapper, itemsH3, scrollY);
-  showToUp(itemsWrapper, items, scrollY);
+  
 });
 
 function showToUp(container, target, scrollMount) {
@@ -296,8 +351,8 @@ const navigator = document.querySelector(".navigator");
 const btt = navigator.querySelector(".backToTop");
 
 /*
-스크롤양(scrollAmt)이 300보다 크다면 
-btt에 클래스명 active 추가 
+스크롤양(scrollAmt)이 300보다 크다면
+btt에 클래스명 active 추가
 작다면 active 제거
 */
 

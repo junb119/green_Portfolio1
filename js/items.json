@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Winter Season",
+    "video": "https://res.cloudinary.com/dfaxawsud/video/upload/v1703729768/nurimqmq6sr14zrkrt8c.mp4",
+    "mainitems": {
+      "titleImg": "./images/items/mainItemTitle1.jpg",
+      "h2": "ode to winter",
+      "h3": "가볍게 입기 좋은 캐주얼 아우터",
+      "itemlist": [
+        {
+          "img": "./images/items/23_seasonlook_10_casualouter_02.png",
+          "name": "파우더 소프트 다운"
+        },
+        {
+          "img": "./images/items/23_seasonlook_10_casualouter_03.png",
+          "name": "패디드 볼륨 자켓"
+        },
+        {
+          "img": "./images/items/23_seasonlook_10_casualouter_04.png",
+          "name": "하이브리드 다운"
+        },
+        {
+          "img": "./images/items/23_seasonlook_10_casualouter_05.png",
+          "name": "퍼프테크"
+        },
+        {
+          "img": "./images/items/23_seasonlook_10_casualouter_06.png",
+          "name": "울트라 라이트 다운"
+        },
+        {
+          "img": "./images/items/23_seasonlook_10_casualouter_07.png",
+          "name": "후리스"
+        }
+      ]
+    },
+    "slide": [
+      "./images/slide/slide1.jpg",
+      "./images/slide/slide2.jpg",
+      "./images/slide/slide3.jpg",
+      "./images/slide/slide4.jpg",
+      "./images/slide/slide5.jpg",
+      "./images/slide/slide6.jpg",
+      "./images/slide/slide7.jpg",
+      "./images/slide/slide8.jpg",
+      "./images/slide/slide9.jpg",
+      "./images/slide/slide10.jpg",
+      "./images/slide/slide11.jpg"
+    ]
+  },
+  {
+    "title": "Spring Season",
+    "video": "./images/video/spring.mp4",
+    "mainitems": {
+      "titleImg": "",
+      "h2": "",
+      "h3": "",
+      "itemlist": [
+        {
+          "img": "",
+          "name": ""
+        }
+      ]
+    },
+    "slide": [
+      {
+        "src": "",
+        "alt": ""
+      }
+    ]
+  }
+]
