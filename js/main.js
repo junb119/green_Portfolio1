@@ -1,6 +1,50 @@
 // common
 let currentScroll = 0; // 스크롤양 초깃값
 
+/* POP UP PORTFOLIO NOTICE */
+let noticePopup = document.querySelector(".notice_portfolio"),
+  popupClose = noticePopup.querySelector(".popup_close"),
+  dontSee = noticePopup.querySelector("#dont_see");
+
+//쿠키 생성 함수
+function setCookie(name, value, day) {
+  let date = new Date();
+  date.setDate(date.getDate() + day);
+  document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+}
+
+// 쿠키 확인 함수
+function cookieCheck(name) {
+  let cookieArr = document.cookie.split(";");
+  let visited = false;
+  for (let cookie of cookieArr) {
+    if (cookie.search(name) > -1) {
+      visited = true;
+      break;
+    }
+  }
+  //만약 visited의 값이 false라면 dialog가 보인다
+  if (!visited) {
+    noticePopup.setAttribute("open", "");
+  }
+}
+cookieCheck("uniclo");
+
+/* 
+  popupClose 클릭 시, 
+    팝업 display none
+    dontSee에 체크 되어있다면,
+      쿠키 생성,아니라면 쿠키 만료.
+*/
+popupClose.addEventListener("click", () => {
+  noticePopup.style.display = "none";
+  if (dontSee.checked) {
+    setCookie("uniclo", "home", 1);
+  } else {
+    setCookie("uniclo", "home", -1);
+  }
+});
+
 // ---------------------------header
 const header = document.querySelector("header");
 const headerHeight = header.offsetHeight; // 헤더높이 초깃값
@@ -12,7 +56,7 @@ for (let title of gnbTitle) {
     for (let titleAll of gnbTitle) {
       titleAll.querySelector(".gnbMenu").classList.add("hidden"); // 나머지 하위 항목 안보이기
     }
-    
+
     title.querySelector(".gnbMenu").classList.remove("hidden"); //활성화된 하위 항목 보이기
 
     header.style.height =
@@ -52,36 +96,29 @@ for (let title of gnbTitle) {
 
 // 검색 버튼
 const searchBox = header.querySelector(".search");
-const searchInput = searchBox.querySelector('input')
+const searchInput = searchBox.querySelector("input");
 const searchBtn = searchBox.querySelector(".searchBtn.submit");
-const searchClose = searchBox.querySelector(".searchBtn.close");
+const searchClose = document.querySelector(".searchBtn.close");
 const searchIcon = document.querySelector(".user_menu .searchIcon");
 
 searchIcon.addEventListener("click", (e) => {
-  e.preventDefault()
-  searchIcon.classList.add('unvisible')
+  e.preventDefault();
+  searchIcon.classList.add("unvisible");
   searchBox.classList.add("active");
   setTimeout(() => {
-    console.log('test')
+    console.log("test");
     searchBtn.classList.remove("hidden");
     searchClose.classList.remove("hidden");
   }, 300);
 });
 
-
-
-
-
-searchClose.addEventListener('click', ()=> {
+searchClose.addEventListener("click", () => {
   // e.preventDefault()
-  searchIcon.classList.remove('unvisible')
+  searchIcon.classList.remove("unvisible");
   searchBox.classList.remove("active");
   searchBtn.classList.add("hidden");
-  searchClose.classList.add("hidden");  
-  
-  
-})
-
+  searchClose.classList.add("hidden");
+});
 
 // ------------------------items
 
@@ -95,43 +132,79 @@ const items = itemsWrapper.querySelector(".items");
 const slideWrapper = document.querySelector(".slideWrapper");
 const slideContainer = slideWrapper.querySelector(".slideContainer");
 let slides = slideContainer.querySelectorAll("li");
-let slideWidth 
-let slideMarginLeft
+let slideWidth;
+let slideMarginLeft;
+let slideToShow = 3;
 let curruntIdx = 0;
+let timer;
 const slidesCount = slides.length;
-const slideControl = slideContainer.querySelector('.slideControl')
-const prevBtn = slideControl.querySelector('.prevBtn')
-const nextBtn = slideControl.querySelector('.nextBtn')
+const slideControl = slideWrapper.querySelector(".slideControl");
+const prevBtn = slideControl.querySelector(".prevBtn");
+const nextBtn = slideControl.querySelector(".nextBtn");
+const pagers = slideWrapper.querySelectorAll(".pager a");
+resizeSlide();
 
+nextBtn.addEventListener("click", () => {
+  moveSlide(curruntIdx + 1);
+});
+prevBtn.addEventListener("click", () => {
+  moveSlide(curruntIdx - 1);
+});
 
+pagers.forEach((pager, idx) => {
+  pager.addEventListener("click", (e) => {
+    e.preventDefault();
+    moveSlide(idx);
+  });
+});
 
-prevBtn.addEventListener('click', ()=> {
-  
-})
-
-
-
-
-function moveSlide(idx) {
-  
-  curruntIdx = idx
+function autoSlide() {
+  timer = setInterval(() => {
+    if (curruntIdx >= slidesCount - slideToShow) {
+      moveSlide(0);
+    } else moveSlide(curruntIdx + 1);
+  }, 3000);
 }
 
+slideContainer.addEventListener("mouseenter", () => {
+  clearInterval(timer);
+});
+slideContainer.addEventListener("mouseleave", () => {
+  autoSlide();
+});
+autoSlide();
 
+function moveSlide(idx) {
+  resizeSlide();
+  slideContainer.style.transform = `translateX(${
+    -idx * (slideWidth + slideMarginLeft)
+  }px)`;
+  curruntIdx = idx;
+
+  if (curruntIdx === 0) {
+    prevBtn.style.display = "none";
+  } else if (curruntIdx === slidesCount - slideToShow) {
+    nextBtn.style.display = "none";
+  } else {
+    prevBtn.style.display = "";
+    nextBtn.style.display = "";
+  }
+}
+moveSlide(0);
 // 브라우저 너비대비 슬라이드 크기 변경
 function resizeSlide() {
   let bodyWidth = document.body.offsetWidth;
   for (let slide of slides) {
-    slideWidth = bodyWidth * 0.3 
-    slideMarginLeft = bodyWidth * 0.05
+    slideWidth = bodyWidth * 0.3;
+    slideMarginLeft = bodyWidth * 0.05;
 
-    slide.style.width = slideWidth + 'px'
+    slide.style.width = slideWidth + "px";
     slide.style.marginLeft = slideMarginLeft + "px";
   }
-  slides[0].style.marginLeft = 0;
-  slideContainer.style.width = bodyWidth * 0.3 * slides.length + "px";
+  slides[0].style.marginLeft = 0 + "px";
+  slideContainer.style.width =
+    slideWidth * slides.length + slideMarginLeft * (slides.length - 1) + "px";
 }
-
 
 window.addEventListener("resize", () => {
   resizeSlide();
@@ -250,8 +323,7 @@ btt.addEventListener("click", (e) => {
 });
 
 navigator.addEventListener("mouseenter", () => {
-  if (btt.classList.contains("active") )
-    navigator.classList.add("active");
+  if (btt.classList.contains("active")) navigator.classList.add("active");
 });
 navigator.addEventListener("mouseleave", () => {
   navigator.classList.remove("active");

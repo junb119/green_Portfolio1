@@ -14,10 +14,10 @@ main section {
   margin-bottom: 0;
 }
 
-main .videoContainer {
+.videoContainer {
 }
 
-main .videoContainer > a::after {
+.videoContainer:after {
   content: "";
   position: absolute;
   top: 0;
@@ -28,7 +28,7 @@ main .videoContainer > a::after {
   pointer-events: none;
 }
 
-main .videoContainer video {
+.videoContainer video {
   width: 100%;
   height: 100vh;
   margin: auto 0;
@@ -59,14 +59,14 @@ main .videoContainer video {
   margin: 10px 0 30px 0;
   font-size: var(--T-sectionTitle-size);
   font-weight: var(--T-weight-bold);
-  transition: 0.8s .3s ease-in-out;
+  transition: 0.8s 0.3s ease-in-out;
 }
 
 .itemsWrapper .items {
   width: calc(4 / 7 * 100%);
   flex-wrap: wrap;
   gap: 5%;
-  transition: 0.8s .6s ease-in-out;
+  transition: 0.8s 0.6s ease-in-out;
 }
 
 .itemsWrapper h2,
@@ -118,8 +118,8 @@ main .videoContainer video {
 } */
 
 .slideContainer {
-  
-  transition: .3s;
+  transform: translateX(0);
+  transition: 0.5s ease-out;
   display: flex;
 }
 .slideContainer > li {
@@ -138,24 +138,50 @@ main .videoContainer video {
   border-radius: 5%;
   box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
 }
-
-.slideControl span {
+.slideControl {
+}
+.slideControl div {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.slideControl .nextBtn {
+  right: 0;
+}
+
+.slideControl span {
   font-size: calc(var(--T-mainTitle-size) * 3);
   font-weight: 100;
   color: var(--C-white);
   text-shadow: 2px 2px 3px #000;
-  z-index: 1;
 }
 .slideControl span:hover {
   cursor: pointer;
   color: var(--C-footerDesc);
 }
+.pager {
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  gap: 15px;
+  margin-top: -15px;
+}
 
-.slideControl .nextBtn span {
-  right: 0;
+.pager a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: var(--C-BG);
+  border-radius: 50%;
+  text-indent: -9999em;
+}
+.pager a:hover {
+  background-color: var(--C-appTitle);
 }
 
 /* ----------------------------secondary_items section */
@@ -198,13 +224,13 @@ main .videoContainer video {
   color: var(--C-white);
 }
 .secondary_title h2 {
-  font-size: 64px;
-  line-height: 103px;
+  font-size: var(--T-sectionTitle-size);
+  line-height: calc(var(--T-sectionTitle-size) * 1.618);
   text-transform: uppercase;
 }
 
 .secondary_title p {
-  /* font-family: "Roboto-Serif"; */
+  font-family: "Roboto Serif";
   font-size: 64px;
   text-transform: capitalize;
 }
@@ -260,7 +286,7 @@ main .videoContainer video {
 
 /* --------------------app section */
 .app {
-  margin: 0 auto 100px;
+  margin: 0 auto 50px;
 }
 
 .app .textContainer {
@@ -294,7 +320,7 @@ main .videoContainer video {
 }
 
 .app .b-Contents {
-  margin-top: 30px;
+  margin: 30px 0 50px;
   gap: 50px;
   text-align: center;
 }
@@ -312,3 +338,113 @@ main .videoContainer video {
   font-size: 14px;
   line-height: 23px;
 }
+
+.app .appDetail {
+  font-size: var(--T-mainTitle-size);
+  color: var(--C-appTitle);
+  font-weight: var(--T-weight-bold);
+  background-color: var(--C-BG);
+  padding: 30px;
+  border: 1px solid var(--C-appTitle);
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.app .appDetail:hover {
+  background-color: var(--C-appTitle);
+  color: var(--C-white);
+}
+
+
+/* ----------------- popup notice portfolio*/
+
+
+.notice_portfolio {
+  position: fixed;
+  left: -70%;
+  top: 50px;
+  width: 320px;
+  height: 610px;
+  padding: 30px;
+  border: 3px solid #063d6c;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+  background: #f8f8f8;
+  color: #454545;
+  z-index: 1001;
+}
+
+.notice_portfolio strong {
+  font-weight: 700;
+}
+
+.popup_logo {
+  width: 117px;
+  height: 53px;
+  display: block;
+  margin: 0 auto 40px;
+}
+
+#notice_tt {
+  line-height: 1.2em;
+  margin-bottom: 14px;
+}
+
+#notice_tt h2 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+#notice_tt p {
+  font-size: 13px;
+}
+
+.notice_portfolio h2 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.8em;
+}
+
+.notice_portfolio h3 {
+  font-size: 13px;
+  line-height: 1.8em;
+}
+
+.pages_link a {
+  margin-right: 10px;
+}
+
+.fa-github {
+  margin-left: 5px;
+}
+
+.underlined {
+  text-decoration: underline;
+  color: #102e47;
+}
+
+.popup_close {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: #063d6c;
+  cursor: pointer;
+}
+
+.cookie {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.cookie label {
+  font-size: 12px;
+  vertical-align: 3px;
+}
+
+#dont_see{
+  cursor: pointer;
+}
+

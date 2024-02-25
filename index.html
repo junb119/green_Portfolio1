@@ -3,6 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="유니클로, uniclo, lifewear, 유니클로 코리아"
+    />
+    <meta
+      name="description"
+      content="유니클로 쇼핑몰 웹사이트 리뉴얼 프로젝트"
+    />
+    <meta
+      id="ctl00_og_title"
+      property="og:title"
+      content="유니클로 | 여성, 남성, 키즈&베이비 의류"
+    />
+    <meta
+      id="ctl00_og_image"
+      property="og:image"
+      content="https://im.uniqlo.com/global-cms/spa/resd13bb13126fee9bab34ffea9515ecc9ffr.jpg"
+    />
+    <meta name="copyright" content="wjb portfolio" />
+    <meta name="robots" content="all" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -14,9 +34,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="shotcut icon" href="./images/favicon/favicon-32x32.png">
+    <link rel="shotcut icon" href="./images/favicon/favicon-32x32.png" />
 
     <!-- 웹폰트 가져오기  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz@0,8..144;1,8..144&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/main.css" />
     <script defer src="./js/main.js"></script>
     <title>유니클로 | 여성, 남성, 키즈&베이비 의류</title>
@@ -29,7 +56,7 @@
           <li class="gnbTitle">
             <a href="#">woman</a>
             <ul class="gnbMenu hidden">
-              <li><h3>women</h3></li>
+              <li class="nonehover"><h3>women</h3></li>
               <li class="titleItem">
                 <a href="#">outer 아우터</a>
                 <ul class="hidden">
@@ -155,7 +182,7 @@
           <li class="gnbTitle">
             <a href="#">men</a>
             <ul class="gnbMenu hidden">
-              <li><h3>men</h3></li>
+              <li class="nonehover"><h3>men</h3></li>
               <li class="titleItem">
                 <a href="#">outer 아우터</a>
                 <ul class="hidden">
@@ -420,11 +447,13 @@
         </ul>
         <h1 id="logo"><a href="#">uniqlo_logo</a></h1>
         <div class="top-menu">
-          <div class="search">
-            <input type="text" class="searchInput" />
-            <button class="searchBtn submit hidden">검색</button>
-            <button class="searchBtn close hidden">X</button>
-          </div>
+          <form action="#" class="search" name="search">
+            <input type="search" class="searchInput" />
+            <button name="search" class="searchBtn submit hidden">
+              <span class="material-symbols-outlined menuicon"> search </span>
+            </button>
+          </form>
+          <button class="searchBtn close hidden">X</button>
           <ul class="user_menu d-flex jc-sb">
             <li class="searchIcon">
               <a href="#" class="d-flex f-d-c ai-c">
@@ -460,19 +489,17 @@
       <button class="headerCloseBtn hidden">닫기</button>
     </header>
     <main class="d-flex f-d-c">
-      <section class="videoContainer">
-        <a href="#">
-          <video muted autoplay loop controls>
-            <source
-              src="https://res.cloudinary.com/dfaxawsud/video/upload/v1703729768/nurimqmq6sr14zrkrt8c.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </a>
-      </section>
+      <div class="videoContainer">
+        <video muted autoplay loop controls>
+          <source
+            src="https://res.cloudinary.com/dfaxawsud/video/upload/v1703729768/nurimqmq6sr14zrkrt8c.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
       <section class="main_items d-flex ai-c">
         <div class="titleImage half">
-          <img src="./images/items/mainItemTitle1.jpg" alt="" />
+          <img src="./images/items/mainItemTitle1.jpg" alt="mainItemTitle1" />
         </div>
         <div class="itemsWrapper half d-flex f-d-c">
           <h2>ode to winter</h2>
@@ -482,7 +509,7 @@
               <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_02.png"
-                  alt=""
+                  alt="파우더 소프트 다운"
                 />
                 <div>파우더 소프트 다운</div>
               </a>
@@ -491,7 +518,7 @@
               <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_03.png"
-                  alt=""
+                  alt="패디드 볼륨 자켓"
                 />
                 <span>패디드 볼륨 자켓</span>
               </a>
@@ -500,7 +527,7 @@
               <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_04.png"
-                  alt=""
+                  alt="하이브리드 다운"
                 />
                 <span>하이브리드 다운</span>
               </a>
@@ -509,7 +536,7 @@
               <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_05.png"
-                  alt=""
+                  alt="퍼프테크"
                 />
                 <span>퍼프테크</span>
               </a>
@@ -518,7 +545,7 @@
               <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_06.png"
-                  alt=""
+                  alt="울트라 라이트 다운"
                 />
                 <span>울트라 라이트 다운</span>
               </a>
@@ -527,7 +554,7 @@
               <a href="#">
                 <img
                   src="./images/items/23_seasonlook_10_casualouter_07.png"
-                  alt=""
+                  alt="후리스"
                 />
                 <span>후리스</span>
               </a>
@@ -535,18 +562,8 @@
           </ul>
         </div>
       </section>
-      <section class="slideWrapper">
+      <div class="slideWrapper">
         <ul class="slideContainer">
-          <div class="slideControl">
-            <div class="prevBtn btn">
-              <span class="material-symbols-outlined">
-                arrow_back_ios_new
-              </span>
-            </div>
-            <div class="nextBtn btn">
-              <span class="material-symbols-outlined"> arrow_forward_ios </span>
-            </div>
-          </div>
           <li>
             <a href="#"><img src="./images/slide/slide1.jpg" alt="slide1" /></a>
           </li>
@@ -585,8 +602,26 @@
             /></a>
           </li>
         </ul>
-        <div class="pager"></div>
-      </section>
+        <div class="slideControl">
+          <div class="prevBtn btn">
+            <span class="material-symbols-outlined"> arrow_back_ios_new </span>
+          </div>
+          <div class="nextBtn btn">
+            <span class="material-symbols-outlined"> arrow_forward_ios </span>
+          </div>
+        </div>
+        <ul class="pager">
+          <li><a href="">1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+          <li><a href="">6</a></li>
+          <li><a href="">7</a></li>
+          <li><a href="">8</a></li>
+          <li><a href="">9</a></li>
+        </ul>
+      </div>
       <section class="secondary_items d-flex">
         <ul class="l-items half">
           <li class="active">
@@ -701,32 +736,37 @@
         <ul class="m-list half d-flex">
           <li>
             <figure>
-              <img src="./images/magazine/magazine2.gif" alt="" />
+              <img src="./images/magazine/magazine1.gif" alt="magazine1" />
               <figcaption>밀라노 거리의 라이프 웨어</figcaption>
             </figure>
           </li>
           <li>
             <figure>
-              <img src="./images/magazine/thumb 123(1).webp" alt="" />
+              <img src="./images/magazine/magazine2.webp" alt="magazine2" />
               <figcaption>9가지 레이어링 테크닉</figcaption>
             </figure>
           </li>
           <li>
             <figure>
-              <img src="./images/magazine/thumb.webp" alt="" />
+              <img src="./images/magazine/thumb.webp" alt="thumb" />
               <figcaption>Introduction</figcaption>
             </figure>
           </li>
           <li>
             <figure>
-              <img src="./images/magazine/magazine3.gif" alt="" />
+              <img src="./images/magazine/magazine3.gif" alt="magazine3" />
               <figcaption>북유럽의 그레이 스타일링</figcaption>
             </figure>
           </li>
         </ul>
         <div class="m-cover d-flex f-d-c jc-c">
-          <h2><img src="./images/magazine/logo-lifewear.svg" alt="" /></h2>
-          <img src="./images/magazine/img-keyvisual.webp" alt="" />
+          <h2>
+            <img
+              src="./images/magazine/logo-lifewear.svg"
+              alt="logo-lifewear"
+            />
+          </h2>
+          <img src="./images/magazine/img-keyvisual.webp" alt="img-keyvisual" />
           <h3>Modern Layering</h3>
           <p>Issue 09 | 2023 Fall & Winter</p>
         </div>
@@ -744,7 +784,7 @@
         </div>
         <ul class="b-Contents d-flex">
           <li>
-            <img src="./images/app/L1_TOPIC_1_220624.jpg" alt="" />
+            <img src="./images/app/L1_TOPIC_1_220624.jpg" alt="appDescript1" />
             <h4>무료배송</h4>
             <p>
               온라인에서 첫 구매 시무료배송!<br />3만원 이상 주문 시
@@ -752,7 +792,7 @@
             </p>
           </li>
           <li>
-            <img src="./images/app/L1_TOPIC_2_220624.jpg" alt="" />
+            <img src="./images/app/L1_TOPIC_2_220624.jpg" alt="appDescript2" />
             <h4>특별사이즈 제품</h4>
             <p>
               매장에서 판매하지 않는 큰 사이즈(XXL~4XL)<br />작은 사이즈(XS)
@@ -760,7 +800,7 @@
             </p>
           </li>
           <li>
-            <img src="./images/app/L1_TOPIC_3_220624.jpg" alt="" />
+            <img src="./images/app/L1_TOPIC_3_220624.jpg" alt="appDescript3" />
             <h4>제품 뉴스</h4>
             <p>
               신상품 및 콜라보레이션 런칭 정보, <br />세일 정보까지 받아보실 수
@@ -768,6 +808,7 @@
             </p>
           </li>
         </ul>
+        <a href="#" class="appDetail">자세히 보기</a>
       </section>
     </main>
     <hr />
@@ -866,7 +907,61 @@
       <a href="#" class="backToTop"><i class="fas fa-arrow-up"></i></a>
       <a href="#" class="cart">cart</a>
     </div>
+    <div class="login hidden">
+      <div class="modalBody">
+        <h2>login</h2>
+        <button class="closeLogin">X</button>
+        <form action="#" method="post" class="loginform">
+          <label for="email">이메일 : </label>
+          <input type="email" id="email" name="email" />
+          <label for="password">비밀번호 : </label>
+          <input type="password" id="password" name="password" />
+          <button>로그인</button>
+        </form>
+      </div>
+    </div>
 
-    <!-- <a href="#" class="cart"></a> -->
+    <dialog class="notice_portfolio">
+      <img class="popup_logo" src="./images/logo_2021.svg" alt="" />
+      <div id="notice_tt">
+        <h2>
+          본 웹 사이트는
+          <strong>구직용 개인 포트폴리오</strong> 사이트입니다.<br />
+          '유니클로'와는 무관함을 안내드립니다.
+        </h2>
+        <p>
+          본 사이트에 사용된 모든 이미지와 내용의 저작권은<br />
+          '유니클로'에 있으므로 무단으로 사용할 수 없습니다.
+        </p>
+      </div>
+      <h2>제작기간 : 24.02.5 ~ 24.02.25</h2>
+      <div class="popup_pages">
+        <h2>구현 완료 페이지 :</h2>
+        <h3 class="pages_link">
+          <a href="index.html">메인페이지</a>
+          <a
+            href="https://junb119.github.io/green_Portfolio1"
+            target="_blank"
+            class="underlined"
+            >깃허브<i class="fa-brands fa-github"></i
+          ></a>
+        </h3>
+      </div>
+      <h2>주요 사용 언어 :</h2>
+      <h3>HTML, CSS, Javascript</h3>
+      <hr />
+      <h2>기획, 디자인, 제작 및 구현 : 우준범</h2>
+      <h3><a href="#" class="underlined">기획서 바로가기</a></h3>
+      <hr />
+      <button class="popup_close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="cookie">
+        <label for="dont_see">오늘 하루 보지 않기</label>
+        <input id="dont_see" type="checkbox" />
+      </div>
+    </dialog>
+
+    <aside></aside>
   </body>
 </html>
