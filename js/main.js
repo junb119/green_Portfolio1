@@ -1,6 +1,6 @@
 // import fetchData from "./data.js";
 
-// fetchData 함수 호출
+// // fetchData 함수 호출
 // fetchData().then((datas) => {
 //   // JSON 데이터 사용
 //   console.log(datas);
